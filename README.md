@@ -24,7 +24,8 @@ The proposal is angled at the "AI in Teaching & Skills Development" focus area, 
 
 - 2026-08-18: proposal drafted in the arti-vault drafts folder from the wiki's teaching and strategy pages, then moved here as `proposal.qmd`.
 - 2026-08-18: proposal revised (the practical note on the missing call for talks dropped, Word output added) and rendered to `proposal.docx` as the version for sending.
-- Open: the symposium page lists no call for talks and no submission due date; proposals go to symposium@enhancer.ch. Whether and when this proposal was sent is not recorded here, and no acceptance is recorded as of 2026-09-16. Add the date once known.
+- 2026-08-18: proposal submitted to the organisers (symposium@enhancer.ch; the symposium page lists no call for talks and no submission due date).
+- Open: acceptance. None recorded as of 2026-09-16.
 
 ## Related public material
 
