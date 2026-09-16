@@ -5,18 +5,18 @@ author:
     orcid: 0000-0003-2196-5015
     affiliation: Global Health Engineering, ETH Zurich
 date: 2026-08-18
-format: html
+format:
+  html: default
+  docx: default
 ---
 
 ## Event
 
 EnhanceR Symposium 2026, "AI in Scientific Coding Workflows", 2026-11-30, Paul Scherrer Institute, Villigen. The audience is research IT specialists, research software engineers, data stewards, and research data management experts in Switzerland.
 
-Practical note: the captured symposium page lists open registration but no call for talks and no submission due date. Talks run as show-and-tell sessions. Ask symposium@enhancer.ch how to propose one.
-
 ## Focus area fit
 
-The talk fits two focus areas. AI in Teaching & Skills Development is the strongest fit; the core of the talk is how to teach Git, GitHub, and coding agents to novices, which matches the area's stated scope of teaching with AI, learning outcomes, and good practices for researchers. Responsible & Secure AI Use is the second fit through the data classification rule, the repository guardrails, and the observation that early access made the group more alert to privacy and sensitivity. The abstract below is angled toward the teaching area.
+AI in Teaching & Skills Development is the strongest fit; the core of the talk is how to teach Git, GitHub, and coding agents to novices, which matches the area's stated scope of teaching with AI, learning outcomes, and good practices for researchers. Responsible & Secure AI Use is the second fit through the data classification rule, the repository guardrails, and the observation that early access made the group more alert to privacy and sensitivity. The abstract below is angled toward the teaching area.
 
 ## Abstract
 
