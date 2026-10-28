@@ -1,33 +1,24 @@
 # talk-enhancer
 
-Talk proposal and, later, talk materials for the EnhanceR Symposium 2026.
-
-## The event
-
-- EnhanceR Symposium 2026: "AI in Scientific Coding Workflows"
-- Monday, 30 November 2026, full day, in person
-- Paul Scherrer Institute, Villigen, Auditorium (WHGA/001)
-- Audience: Swiss research IT specialists, research software engineers, data stewards, and research data management experts
-- Participation is free; registration is mandatory
-- Event website: <https://symposium.enhancer.ch/>
-- Contact: symposium@enhancer.ch
-
-The symposium runs show-and-tell sessions and explicitly invites both success and failure stories on responsible AI use in Swiss academia.
-
-## The proposal
-
-`proposal.qmd` holds the talk proposal: "Teaching Git, GitHub, and coding agents to researchers who do not come from IT". Global Health Engineering (ETH Zurich) hired its Open Science Specialist from the sector rather than from IT, and the talk turns that missing expertise into the teaching method: designing workshop material against expert blind spots and novice fear, from the Git for Scientists foundation workshop (seven commands, the branch-and-PR cycle, the three walls where beginners give up) to Agentic Coding for Collaboration and Scientific Work.
-
-The proposal is angled at the "AI in Teaching & Skills Development" focus area, with "Responsible & Secure AI Use" as the second fit. It deliberately speaks of transparency and disclosure rather than "safety", following the program's core vocabulary.
+Talk at the EnhanceR Symposium 2026: "Teaching Git, GitHub, and coding agents to researchers who do not come from IT". Lars Schöbitz, Global Health Engineering, ETH Zurich.
 
 ## Status
 
-- 2026-08-18: proposal drafted in the arti-vault drafts folder from the wiki's teaching and strategy pages, then moved here as `proposal.qmd`.
-- 2026-08-18: proposal revised (the practical note on the missing call for talks dropped, Word output added) and rendered to `proposal.docx` as the version for sending.
-- 2026-08-18: proposal submitted to the organisers (symposium@enhancer.ch; the symposium page lists no call for talks and no submission due date).
-- Open: acceptance. None recorded as of 2026-09-16.
+Accepted on 28 October 2026 for the Show-and-Tell session: 20 minutes of talk and 5 minutes of questions, held once or repeated in two sessions depending on the final programme. The proposal was sent on 18 August 2026.
 
-## Related public material
+## Event
 
-- Git for Scientists workshop materials, published as Open Educational Resources
-- "Who wrote this?" blog post on scientific integrity and AI-assisted work at GHE: <https://ghe.ethz.ch/>
+EnhanceR Symposium 2026, "AI in Scientific Coding Workflows". Monday 30 November 2026, Paul Scherrer Institute, Villigen, Auditorium WHGA/001. Website: <https://symposium.enhancer.ch/>.
+
+## Abstract
+
+Global Health Engineering (GHE) is an interdisciplinary research group of 15 people at ETH Zurich. We work with partners in resource-constrained countries, and most of us come from disciplines with little computing tradition. Digital skills in our sector are low, and it shows in the output. Little data is published following FAIR sharing principles, and almost no work is computationally reproducible. GHE responded by hiring an Open Science Specialist who comes from research in the sector rather than from IT. I am that specialist, and I am not a research IT expert.
+
+The talk makes that missing expertise its starting point. Experts carry mental models they no longer notice, e.g., an expert treats reading an error message as a normal step, while a novice reads it as proof they did something wrong. Material built on expert mental models fails novices, who often stay quiet because they fear being judged for how they use technology. I will show how we design against that fear in our two-part workshop series, Agents for Scientists. The foundation workshop, Git & GitHub for Scientists, teaches seven Git commands, the branch-and-PR cycle, and GitHub Issues and Project boards through participatory live coding, and spends explicit time on the aspects where beginners give up: authentication, merge conflicts, and committing on the wrong branch. The follow-up workshop, Agentic Coding for Collaboration and Scientific Work, teaches risk assessment, the handling of personal and sensitive data, and working with Claude Code as a versioned, reviewable collaborator. The foundation workshop materials are published as Open Educational Resources and will continue to evolve with each iteration.
+
+For years we battled to establish our coding, data, and writing workflows on Git version control, and the struggle was rooted in our non-IT backgrounds. AI tools, and coding agents in particular, have lowered that barrier, and we are using the gain to invest further in rigorous, transparent, and reproducible research. We teach Git first because version control makes agent use traceable and disclosable, and that record is what lets a novice work with an agent confidently. I will close with what our non-restrictive approach to agent access has changed in the group, and with the blind spots I would ask this expert audience to check for in their own teaching material.
+
+## Files
+
+- `proposal.qmd`: the submitted proposal (event, focus area fit, abstract), rendered to `proposal.docx` for sending.
+- The slides follow here before the symposium.
