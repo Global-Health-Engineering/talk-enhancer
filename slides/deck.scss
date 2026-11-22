@@ -1,0 +1,58 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Atkinson Hyperlegible Next", "Helvetica Neue", Arial, sans-serif;
+$presentation-font-size-root: 40px;
+$body-bg: #F6F1E7;
+$body-color: #1A1714;
+$link-color: #901C6C;
+$presentation-heading-font-weight: 800;
+$presentation-heading-color: #1A1714;
+$presentation-h2-font-size: 1.5em;
+$presentation-h3-font-size: 1.1em;
+
+/*-- scss:rules --*/
+// Paper, ink and one purple, after the Ledger deck of the RDC 2026 talk.
+:root {
+  --paper: #F6F1E7;
+  --ink: #1A1714;
+  --grey: #4A453E;
+  --accent: #901C6C;
+}
+
+.reveal .slides section { text-align: left; }
+.reveal h2 { letter-spacing: -0.01em; margin-bottom: 0.7em; }
+.reveal h3 { color: var(--accent); }
+.reveal li { margin-bottom: 0.45em; line-height: 1.25; }
+.reveal .fragment { transition: none !important; }
+
+.reveal .key {
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 3px solid var(--ink);
+  font-size: 1.25em;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.reveal .source {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.6em;
+  color: var(--grey);
+}
+
+.reveal .title-slide-own .tt {
+  font-size: 2.3em;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: 1.2em;
+}
+.reveal .title-slide-own .ta {
+  margin-top: 1.5em;
+  padding-top: 0.6em;
+  border-top: 3px solid var(--ink);
+  font-size: 0.8em;
+}
+
+.reveal .columns img { max-height: 560px; }
+.reveal img.note-photo { max-height: 620px; display: block; margin: 0 auto; }
