@@ -21,8 +21,8 @@ Suggested slides:
 
 Open points:
 
-- The first question says "GitHub". The printed title says "Git, GitHub, and coding agents". One wording for both?
-- The decision of 22 November was a show of hands with hands down in two steps. These two questions replace it?
+- The first question says "GitHub". The printed title says "Git, GitHub, and coding agents". One wording for both? TODO: Yes, include all from the printed title.
+- The decision of 22 November was a show of hands with hands down in two steps. These two questions replace it? TODO: Yes, and I want everyone to get up from their seats instead of showing hands.
 
 ### 2. Where my own teaching comes from
 
@@ -33,7 +33,9 @@ Open points:
 Suggested slides:
 
 - Slide 3, "Who speaks": Global Health Engineering, 15 people, disciplines with little computing tradition, a specialist hired from the sector, "I am not a research IT expert". From the proposal and the draft slide "Who speaks".
+  - TODO: This can be my slide from RDC Embedded data stewardship
 - Slide 4, "Teaching Tech Together": the book cover or title, Greg Wilson (2019), free to read online, and one line on what it gave me.
+  - TODO: Add that today this is still taught through The Carpentries instructor training, of which Greg is the founder
 
 ### 3. The words "just", "quickly", "easily"
 
@@ -45,9 +47,11 @@ Suggested slides:
 
 Suggested slides:
 
-- Slide 5, three words in large type: just, quickly, easily. Then the question "Have you ever filmed your own workshop?"
+- Slide 5, three words in large type: just, quickly, easily. Then the question "Have you ever filmed your own workshop?" TODO: Yes, and a small placeholder to show a photo of someone that look highly demotivated.
 - Slide 6, "The expert blind spot": the error message, read as a normal step by the expert and as proof of failure by the novice. From the proposal and the draft slide of the same name.
+  - TODO: Yes, and a citation to the section from Greg's book for this point. The mental model argument by which experts design their teaching and but novices receive too many uncertainties.
 - Slide 7, "No gene for coding": the study in Teaching Tech Together, where 5.8% of 778 university grade distributions looked bimodal, and professors who believed in innate talent were more likely to see two groups.
+  - TODO: Yes, but also placeholder for a photo or similar.
 
 ### 4. Motivation and demotivation
 
@@ -56,7 +60,9 @@ Suggested slides:
 Suggested slides, from the chapter "Motivation and Demotivation" of Teaching Tech Together:
 
 - Slide 8, "What motivates": competence, autonomy, relatedness. One line below: achievement leads to motivation more reliably than the other way round (Dylan Wiliam), so early wins come first.
+  - TODO: No matter how easy or simple. This is also where giving everyone significant time for pre-work and then teaching that pre-work in the first lecture pay off. They spend their own time to complete, some significantly more than others, but without noticing it in class. Then, in class, they are more likely to keep pace with the more experience learners and will also be able to have formed their own questions due to the pre-work. It's a flipped classroom model without calling it that.
 - Slide 9, "What takes the motivation away": unpredictability, indifference, unfairness. Then the list for a technical room: saying "just", feigned surprise, jokes about Excel, deep technical talk with the most advanced learners, installation problems. The draft slide "What takes the motivation away" can be the base.
+  - TODO: Take 30 seconds to ask yourself what you might have done in class to demotivate your audience.
 
 ### 5. How I teach
 
@@ -71,6 +77,7 @@ Suggested slides:
 Open point:
 
 - "The points from the RDC conference that I didn't use": which points are these? Candidates from the RDC talk are "no doctorate or computer science degree, with empathy, patience and persistence counting more", "tools and teaching from within the group and never forced", and the two voices from the group. Please name them here.
+  - TODO: My slides and preparation og slides for gitforsci-rdc workshop had a whole list of points where I document key elements of how I teach.
 
 ### 6. What changes in the group
 
@@ -81,16 +88,22 @@ Open point:
 Suggested slides:
 
 - Slide 11, the commits chart of the group around the Git for Scientists and Agents for Scientists workshops, from a code chunk on the ghedata numbers, as in the RDC deck. One line under the chart: commits are imperfect proxies for competency.
+  - TODO: Commits, PRs, Comments, etc. may be imperfect proxies for competency or research quality, but show they show the shift towards actively working with version control systems, which is the aim. Once we have everyone using the tools comfortably, we can increase our overall potential for collaborative work that leads to competency and quality.
 - Slide 12, "From 'I cannot do this' to 'I can learn this'": one or two voices from the group, as in the RDC talk.
+  - TODO: Only if I manage to give the talk to them.
 - Slide 13, "Why Git first, then agents": version control is what connects a prompt to its changes. This is the slide that carries the coding agents of the title.
+  - TODO: And it moves people into a different mindest for project and folder organization, file management, etc. The folder as the unit of an output (a manuscript, a dataset, a piece of softwarem, etc.) to which tasks (issues) are attached where they belong (issue tracker, not seperate from the folder itself and buried in email, Asana, TODOist, and the likes).
 
 Open points:
 
 - The RDC talk found that of the 14 group members who took a workshop on Git or agents, 7 have no commit since. It could be the honest second half of the chart slide. In or out?
+  - TODO: In, and I wand to look at the 7 that haven't. Here I will also use my line that "they might have committed their work, but pushed and missed out mantra: commit & push, commit & push, ...)
 - The Teaching Tech Together page in the vault carries a caveat on the growth mindset: three meta-analyses find small or no effects of mindset interventions on achievement. A research IT room may know this. One option is to keep "they now believe they can do it" as what I observe, and to leave the term "growth mindset" out or name the caveat in one line.
+  - TODO: I still like the term and am fine to use it agains the meta-analysis.
 - The decision of 22 November gave the agents part 4 minutes, because the printed abstract promises coding agents and what open agent access changed in the group. In today's words the agents appear through the chart only. How much agent content stays?
+  - TODO: That's okay right now, as I see the gitforsci work somewhat also being agents work and the point is that these other elements are needed to open people up to using agentic AI. I might also bring in the point that: "Claude Code? Codex? Clearly these aren't for me and only for people writing code." - What terrible wording for a more powerful chat window.
 
-### 7. Last week: my own workshop as the test
+### 7. Last week: my own workshop as the test (TODO: this looks good for now, but may need some cutting later on)
 
 > I myself apply these principles in my own teaching. Last week I was at the Research Data Conference and I taught my first hour of my Git for Scientists workshop. All participants worked through the pre-work tasks. They completed them, some in time, some didn't.
 >
@@ -112,20 +125,21 @@ No words yet.
 Suggested slides:
 
 - Slide 20, "Four checks for your teaching material": assumes error messages are normal; tests authentication before the day; teaches recovery from the wrong branch; collects feedback in a form that can be counted. A fifth candidate from today's words: film one session and count "just", "quickly", "easily".
+  - TODO: not sure. do not like this yet.
 - Slide 21, "Thank you": the two course sites, the citation and funding line from the gitforsci profile, the declaration of AI use.
 
 ## Time budget (suggestion)
 
-| Section | Minutes |
-|---|---|
-| 1. Opening, two questions | 1 |
-| 2. Where my teaching comes from | 2 |
-| 3. Just, quickly, easily | 3 |
-| 4. Motivation and demotivation | 3 |
-| 5. How I teach | 2 |
-| 6. What changes in the group, Git first, agents | 4 |
-| 7. Last week's workshop | 4 |
-| 8. Close | 1 |
-| Total | 20 |
+| Section                                          | Minutes |
+|--------------------------------------------------|---------|
+| 1\. Opening, two questions                       | 1       |
+| 2\. Where my teaching comes from                 | 2       |
+| 3\. Just, quickly, easily                        | 3       |
+| 4\. Motivation and demotivation                  | 3       |
+| 5\. How I teach                                  | 2       |
+| 6\. What changes in the group, Git first, agents | 4       |
+| 7\. Last week's workshop                         | 4       |
+| 8\. Close                                        | 1       |
+| Total                                            | 20      |
 
 21 slides in 20 minutes is tight. Slides 4, 7, 12 and 18 are the first candidates to merge or drop.
