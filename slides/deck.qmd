@@ -430,7 +430,7 @@ Slide 16. What terrible wording for a more powerful chat window.
 - Second hour: the room takes the educator seat and gives feedback on four flipcharts
 
 ::: {.notes}
-Slide 17. Section 7, 3 minutes with the next five slides. I myself apply these principles in my own teaching. Last week I was at the Research Data Conference and I taught my first hour of my Git for Scientists workshop. All participants worked through the pre-work tasks. They completed them, some in time, some didn't.
+Slide 17. Section 7, 3 minutes with the next four slides. I myself apply these principles in my own teaching. Last week I was at the Research Data Conference and I taught my first hour of my Git for Scientists workshop. All participants worked through the pre-work tasks. They completed them, some in time, some didn't.
 :::
 
 ## Who was in the room
@@ -462,51 +462,114 @@ Slide 18. 27 answers in the pre-course survey: 10 data stewards, 5 researchers, 
 Slide 19. First cut if the talk runs long. The online board for the feedback did not open in the room. In the break I set up four flipcharts with post-its from the organisers. The round standing in the room was better than one on laptops.
 :::
 
-## What the room wrote
+## A rubric for feedback {.rubric-slide}
 
 ```{r}
-#| label: plot-post-its
-#| fig-width: 15
-#| fig-height: 6.5
-feedback |>
+#| label: note-counts
+note_counts <- feedback |>
   filter(source == "post_it") |>
-  mutate(
-    valence = if_else(valence == "well", "went well", "can be improved"),
-    valence = factor(valence, levels = c("can be improved", "went well")),
-    category = factor(category, levels = rev(c("preparation", "interaction", "presentation", "content")))
-  ) |>
-  count(category, valence) |>
-  ggplot(aes(x = n, y = category, fill = valence)) +
-  geom_col(position = position_dodge(width = 0.8), width = 0.75) +
-  geom_text(aes(label = n), position = position_dodge(width = 0.8), hjust = -0.4, size = 10, colour = ink) +
-  scale_fill_manual(values = note_colours, guide = guide_legend(reverse = TRUE)) +
-  scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
-  labs(title = "65 post-it notes on four flipcharts") +
-  theme_talk
+  count(category, valence)
+
+n_notes <- function(cat, val) {
+  note_counts$n[note_counts$category == cat & note_counts$valence == val]
+}
 ```
 
+:::::::::::: {.rubric}
+::: {.rh}
+:::
+
+::: {.rh}
+Preparation
+:::
+
+::: {.rh}
+Interaction
+:::
+
+::: {.rh}
+Presentation
+:::
+
+::: {.rh}
+Content
+:::
+
+::: {.rl .well}
+Went well
+:::
+
+:::: {.rc}
+[`r n_notes("preparation", "well")`]{.cnt}
+
+::: {.fragment .paste .postit .well style="--r: -3deg;" data-fragment-index="5"}
+Homework paid off :)
+:::
+::::
+
+:::: {.rc}
+[`r n_notes("interaction", "well")`]{.cnt}
+::::
+
+:::: {.rc}
+[`r n_notes("presentation", "well")`]{.cnt}
+::::
+
+:::: {.rc}
+[`r n_notes("content", "well")`]{.cnt}
+
+::: {.fragment .paste .postit .well style="--r: 2deg;" data-fragment-index="6"}
+I am a complete beginner and I'm starting to understand!
+:::
+::::
+
+::: {.rl .improve}
+Can be improved
+:::
+
+:::: {.rc}
+[`r n_notes("preparation", "not_well")`]{.cnt}
+
+::: {.fragment .paste .postit .improve style="--r: 2deg;" data-fragment-index="1"}
+I didn't catch in the emails that more steps had been added. Would have if I had read, but who does that :)
+:::
+::::
+
+:::: {.rc}
+[`r n_notes("interaction", "not_well")`]{.cnt}
+
+::: {.fragment .paste .postit .improve style="--r: -2deg;" data-fragment-index="2"}
+Question invitations could be even clearer for hesitant people
+:::
+::::
+
+:::: {.rc}
+[`r n_notes("presentation", "not_well")`]{.cnt}
+
+::: {.fragment .paste .postit .improve style="--r: 3deg;" data-fragment-index="3"}
+No mention of what version control is, i.e. the context is missing
+:::
+::::
+
+:::: {.rc}
+[`r n_notes("content", "not_well")`]{.cnt}
+
+::: {.fragment .paste .postit .improve style="--r: -3deg;" data-fragment-index="4"}
+Additional initial explanations: e.g. Git vs GitHub, data protection, actions pull, push, etc.
+:::
+::::
+::::::::::::
+
+::: {.source}
+Four flipcharts, two colours of post-it notes. The number in each field is the count of notes from the room, 65 in all.
+:::
+
 ::: {.notes}
-Slide 20. Content is the one flipchart with more "can be improved" than "went well". The next slide shows why.
-:::
+Slide 20. Four flipcharts in the room: preparation, interaction, presentation, content. One colour for what went well, one for what can be improved. This is the whole rubric. The numbers are the notes per field. Content is the one flipchart with more "can be improved" than "went well".
 
-## My own blind spots
+Six clicks, each pastes one note, in the words of the room. First my own blind spots, one per flipchart: the emails, the invitation to ask questions, what version control is, the concepts before the tools. I teach against the blind spot and still have my own. Then two notes on what held: the pre-work paid off, and a complete beginner in a room of experts started to understand.
 
-::::: {.columns}
-::: {.column width="33%"}
-![](img/post-it-4871.jpg)
-:::
-
-::: {.column width="33%"}
-![](img/post-it-4837.jpg)
-:::
-
-::: {.column width="33%"}
-![](img/post-it-4838.jpg)
-:::
-:::::
-
-::: {.notes}
-Slide 21. Three notes. Concepts I left out because I let people experience first. A screenshot with arrows for who, when, what, why, because a newcomer looks for the words on the screen. Very little time for questions. I teach against the blind spot and still have my own.
+CHECK: the six texts against the photos (IMG_4823, 4840, 4861, 4871, 4814, 4865). On the last one the note reads "complet".
 :::
 
 ## The loop
@@ -522,7 +585,7 @@ Change the material
 :::
 
 ::: {.notes}
-Slide 22. First cut if the talk runs long. Everything I've learned about this one week after my workshop itself, and how people can apply this to their own teaching, specifically through a feedback round.
+Slide 21. First cut if the talk runs long. Everything I've learned about this one week after my workshop itself, and how people can apply this to their own teaching, specifically through a feedback round.
 :::
 
 ## {.words-slide}
@@ -536,7 +599,7 @@ If you teach a technical tool, take an instructor training.
 :::
 
 ::: {.notes}
-Slide 23. Section 8, 1 minute with the last slide. PLACEHOLDER: closing words not written yet. The key line is one of three candidates in the outline. The other two: film one session and count "just", "quickly", "easily"; or the opening again, "Please stand up if you will look at your teaching material differently next week."
+Slide 22. Section 8, 1 minute with the last slide. PLACEHOLDER: closing words not written yet. The key line is one of three candidates in the outline. The other two: film one session and count "just", "quickly", "easily"; or the opening again, "Please stand up if you will look at your teaching material differently next week."
 :::
 
 ## Thank you
@@ -553,5 +616,5 @@ Slide 23. Section 8, 1 minute with the last slide. PLACEHOLDER: closing words no
 :::
 
 ::: {.notes}
-Slide 24. OPEN: the second course site (Agents for Scientists) and the declaration of AI use.
+Slide 23. OPEN: the second course site (Agents for Scientists) and the declaration of AI use.
 :::
