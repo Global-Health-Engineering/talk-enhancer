@@ -6,10 +6,10 @@ How this file works: each section holds my own words first, in quote blocks. Wor
 
 Sources named in the slide plan:
 
-- RDC talk: `talk/ledger/deck.qmd` in https://github.com/Global-Health-Engineering/rdc-2026
+- RDC talk: `talk/ledger/deck.qmd` in <https://github.com/Global-Health-Engineering/rdc-2026>
 - RDC workshop: `workshop/slides.qmd` in the website repository of the gitforsci-rdc organisation
 - Draft deck: `slides/deck.qmd` in this repository (first draft of 22 November)
-- Book: Greg Wilson (2019), Teaching Tech Together, Taylor & Francis, CC BY-NC 4.0, https://teachtogether.tech/en/index.html
+- Book: Greg Wilson (2019), Teaching Tech Together, Taylor & Francis, CC BY-NC 4.0, <https://teachtogether.tech/en/index.html>
 
 ## Lars's notes, 23 November 2026
 
@@ -57,10 +57,10 @@ Slide plan:
 - Slide 5, three words in large type: just, quickly, easily. Then the question "Have you ever filmed your own workshop?" On the side a placeholder for a photo of someone who looks highly demotivated. Base: the slide "Words I leave out" of the RDC workshop, with its line "They say that a step costs nothing. A learner who is stuck on it hears: it is me."
   - TODO: choose the photo. Until then the frowning figure from Greg Wilson's motivation slides (already in the RDC workshop deck, CC BY 4.0) stands in.
 - Slide 6, "The expert blind spot": the error message, read as a normal step by the expert and as proof of failure by the novice. With the citation.
-  - Definition: Wilson (2019), chapter 3, "Expertise and Memory", https://teachtogether.tech/en/index.html#s:memory. Experts "can no longer imagine what it's like to not see the world that way". The same chapter has the box "The J Word": experts often betray their blind spot by using the word "just".
-  - Mental models: Wilson (2019), chapter 2, "Mental Models and Formative Assessment", https://teachtogether.tech/en/index.html#s:models. Novices "don't yet have a usable mental model of the problem domain", and manuals frustrate novices because they use jargon and do not explain things.
+  - Definition: Wilson (2019), chapter 3, "Expertise and Memory", <https://teachtogether.tech/en/index.html#s:memory>. Experts "can no longer imagine what it's like to not see the world that way". The same chapter has the box "The J Word": experts often betray their blind spot by using the word "just".
+  - Mental models: Wilson (2019), chapter 2, "Mental Models and Formative Assessment", <https://teachtogether.tech/en/index.html#s:models>. Novices "don't yet have a usable mental model of the problem domain", and manuals frustrate novices because they use jargon and do not explain things.
   - My point on the slide: experts design their teaching from their own mental model, and novices receive too many uncertainties. The book does not say this in one sentence; the two passages above are the closest, so the slide cites both chapters.
-- Slide 7, "No gene for coding": of 778 university course grade distributions, 5.8% showed signs of being multimodal, and professors who believed in innate talent were more likely to see two groups (Patitsas et al. 2016, cited in Wilson 2019, chapter 10, https://teachtogether.tech/en/index.html#s:motivation-demotivation). With a placeholder for a photo or similar.
+- Slide 7, "No gene for coding": of 778 university course grade distributions, 5.8% showed signs of being multimodal, and professors who believed in innate talent were more likely to see two groups (Patitsas et al. 2016, cited in Wilson 2019, chapter 10, <https://teachtogether.tech/en/index.html#s:motivation-demotivation>). With a placeholder for a photo or similar.
   - TODO: choose the photo. Suggestion: a histogram with one hump drawn in the deck from a code chunk, as the picture of "no two groups".
 
 ### 4. Motivation and demotivation
@@ -85,12 +85,12 @@ Found: the points are in the RDC workshop deck. The slide "Six things I do" was 
 Slide plan:
 
 - Slide 10, "Six things I do", taken over from the RDC workshop, each point with one example:
-  - Words I leave out: just, easily, quickly (already slide 5, so one glance back)
-  - Design for the novice: every click is written down, no gap between two steps, extra material marked as extra
-  - Know the learners, then design: a survey before anything is written (27 answers decided the software), a tracker for the pre-work, the content written the day before
-  - A learner account: every demo runs as a second account with the rights of a learner; with my own account buttons differ and warnings never show
-  - Type with the room, mistakes included: participatory live coding, nothing is pasted
-  - Try out new things
+  - Words I leave out: just, easily, quickly (already slide 5, so one glance back) TODO: In
+  - Design for the novice: every click is written down, no gap between two steps, extra material marked as extra TODO: In
+  - Know the learners, then design: a survey before anything is written (27 answers decided the software), a tracker for the pre-work, the content written the day before TODO: In, but not saying it live
+  - A learner account: every demo runs as a second account with the rights of a learner; with my own account buttons differ and warnings never show TODO: In, but not saying it
+  - Type with the room, mistakes included: participatory live coding, nothing is pasted TODO: In
+  - Try out new things TODO: Out
 - Also in the unused slides, as material for single lines: "Why GitHub Desktop?" (11 RStudio, 6 GitHub Desktop, 4 Positron, 5 no preference; I chose against the largest group) and "The same design, three days ago" (what the cohort before changed in the instructions).
   - TODO: six points in 2 minutes is 20 seconds each. Say which two or three get an example, the others are read from the slide.
 
@@ -147,28 +147,28 @@ No words yet.
   - One ask, from my own workshop slide: "If you teach a technical tool, take an instructor training." It answers the second question of the opening.
   - One thing for the next workshop: film one session and count "just", "quickly", "easily".
   - The opening again: "Please stand up if you will look at your teaching material differently next week."
-- Slide 24, "Thank you": the two course sites, the citation and funding line from https://github.com/gitforsci, the declaration of AI use.
+- Slide 24, "Thank you": the two course sites, the citation and funding line from <https://github.com/gitforsci>, the declaration of AI use.
 
 ## Time budget
 
 | Section | Slides | Minutes |
-|---|---|---|
-| 1. Opening, everyone stands up | 1 to 2 | 2 |
-| 2. Where my teaching comes from | 3 to 4 | 2 |
-| 3. Just, quickly, easily | 5 to 7 | 3 |
-| 4. Motivation and demotivation, with 30 seconds of silence | 8 to 9 | 3 |
-| 5. How I teach | 10 | 2 |
-| 6. What changes in the group | 11 to 16 | 4 |
-| 7. Last week's workshop | 17 to 22 | 3 |
-| 8. Close | 23 to 24 | 1 |
+|------------------------|------------------------|------------------------|
+| 1\. Opening, everyone stands up | 1 to 2 | 2 |
+| 2\. Where my teaching comes from | 3 to 4 | 2 |
+| 3\. Just, quickly, easily | 5 to 7 | 3 |
+| 4\. Motivation and demotivation, with 30 seconds of silence | 8 to 9 | 3 |
+| 5\. How I teach | 10 | 2 |
+| 6\. What changes in the group | 11 to 16 | 4 |
+| 7\. Last week's workshop | 17 to 22 | 3 |
+| 8\. Close | 23 to 24 | 1 |
 | Total | 24 | 20 |
 
 24 slides in 20 minutes is tight, and standing up takes longer than a show of hands. The rehearsal on Thursday 26 November decides the cuts. First candidates: slide 7, slide 12 merged into slide 11, slide 14, slides 19 and 22.
 
 ## Open TODOs
 
-1. Slide 5 and slide 7: choose the photos.
-2. Slide 10: say which two or three of the six points get an example.
-3. Slide 11: look at the 7 trained people without a commit on GitHub.
-4. Slide 14: voices from the group, decide after Thursday 26 November.
-5. Section 8: closing words and the closing slide.
+1.  Slide 5 and slide 7: choose the photos.
+2.  Slide 10: say which two or three of the six points get an example.
+3.  Slide 11: look at the 7 trained people without a commit on GitHub.
+4.  Slide 14: voices from the group, decide after Thursday 26 November.
+5.  Section 8: closing words and the closing slide.
