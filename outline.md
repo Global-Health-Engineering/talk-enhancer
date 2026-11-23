@@ -80,19 +80,17 @@ Slide plan: the two slides of the RDC workshop, taken over with their drawn figu
 >
 > Here's how I teach. Use the points from the RDC conference that I didn't use. [Avoid] the terms, etc.
 
-Found: the points are in the RDC workshop deck. The slide "Six things I do" was shown on 20 November; the section "More on how I teach" behind the thank you slide holds one slide per point and was not shown.
+Found: the points are in the RDC workshop deck. The slide "Six things I do" was shown on 20 November (the sixth, "Try out new things", is out of this talk); the section "More on how I teach" behind the thank you slide holds one slide per point and was not shown.
 
 Slide plan:
 
-- Slide 10, "Six things I do", taken over from the RDC workshop, each point with one example:
-  - Words I leave out: just, easily, quickly (already slide 5, so one glance back) TODO: In
-  - Design for the novice: every click is written down, no gap between two steps, extra material marked as extra TODO: In
-  - Know the learners, then design: a survey before anything is written (27 answers decided the software), a tracker for the pre-work, the content written the day before TODO: In, but not saying it live
-  - A learner account: every demo runs as a second account with the rights of a learner; with my own account buttons differ and warnings never show TODO: In, but not saying it
-  - Type with the room, mistakes included: participatory live coding, nothing is pasted TODO: In
-  - Try out new things TODO: Out
+- Slide 10, "Five things I do", from the slide "Six things I do" of the RDC workshop. All five are on the slide. I say three of them with an example, the other two are read from the slide:
+  - Words I leave out: just, easily, quickly (already slide 5, so one glance back). Said.
+  - Design for the novice: every click is written down, no gap between two steps, extra material marked as extra. Said, with an example.
+  - Know the learners, then design: a survey before anything is written (27 answers decided the software), a tracker for the pre-work, the content written the day before. On the slide, not said.
+  - A learner account: every demo runs as a second account with the rights of a learner; with my own account buttons differ and warnings never show. On the slide, not said.
+  - Type with the room, mistakes included: participatory live coding, nothing is pasted. Said, with an example.
 - Also in the unused slides, as material for single lines: "Why GitHub Desktop?" (11 RStudio, 6 GitHub Desktop, 4 Positron, 5 no preference; I chose against the largest group) and "The same design, three days ago" (what the cohort before changed in the instructions).
-  - TODO: six points in 2 minutes is 20 seconds each. Say which two or three get an example, the others are read from the slide.
 
 ### 6. What changes in the group
 
@@ -168,7 +166,6 @@ No words yet.
 ## Open TODOs
 
 1.  Slide 5 and slide 7: choose the photos.
-2.  Slide 10: say which two or three of the six points get an example.
-3.  Slide 11: look at the 7 trained people without a commit on GitHub.
-4.  Slide 14: voices from the group, decide after Thursday 26 November.
-5.  Section 8: closing words and the closing slide.
+2.  Slide 11: look at the 7 trained people without a commit on GitHub.
+3.  Slide 14: voices from the group, decide after Thursday 26 November.
+4.  Section 8: closing words and the closing slide.
