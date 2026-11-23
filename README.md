@@ -21,6 +21,8 @@ For years we battled to establish our coding, data, and writing workflows on Git
 ## Files
 
 - `proposal.qmd`: the submitted proposal (event, focus area fit, abstract), rendered to `proposal.docx` for sending.
-- `slides/deck.qmd`: the slides (draft of 22 November 2026), a Quarto revealjs deck. The two charts are drawn in the deck from the files in `data/`.
+- `outline.md`: the outline of the talk, with my own words per section and the slide plan. The deck is built from it.
+- `slides/deck.qmd`: the slides (built from the outline on 23 November 2026, with placeholders), a Quarto revealjs deck. The three charts are drawn in the deck from the files in `data/`.
+- `data/commits_by_person.csv`: commits by group member, by rank and without names, copied from the data file of the RDC 2026 talk with the same script.
 - `data/feedback_items.csv` and `data/survey_counts.csv`: feedback and survey counts of the Git for Scientists workshop at the Research Data Conference 2026, copied from the learnings repository of Git for Scientists with `R/get-learnings-data.R`.
 - `slides/img/`: photos of post-it notes from the feedback round of that workshop.
