@@ -123,3 +123,14 @@ $presentation-h3-font-size: 1.1em;
   opacity: 1;
   transform: rotate(var(--r, 0deg)) scale(1);
 }
+
+// Drawings built by slides/img/make_drawings.js, placed inline so they use the deck typeface.
+.reveal .drawing svg { width: 100%; height: auto; max-height: 640px; }
+
+// A drawing that fills the slide width (blind spot, loop).
+.reveal .drawing-wide svg { display: block; margin: 0 auto; max-height: 560px; width: auto; height: 560px; }
+.reveal .drawing-tight svg { height: 440px; }
+.reveal .drawing-wide + .key { margin-top: 0.3em; }
+
+// The word the organisers added to the title.
+.reveal .title-slide-own .ai { color: var(--accent); }

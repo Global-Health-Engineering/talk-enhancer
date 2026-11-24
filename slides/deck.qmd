@@ -1,7 +1,7 @@
 ---
 # Built from outline.md. Slide numbers in the notes follow the outline.
 # The speaker notes hold my words from the outline.
-pagetitle: "Teaching Git, GitHub, and coding agents"
+pagetitle: "Teaching Git, GitHub, and AI coding agents"
 lang: en-GB
 format:
   revealjs:
@@ -41,7 +41,7 @@ grey <- "#B9B2A6"
 accent <- "#901C6C"
 note_colours <- c("went well" = "#F2A04A", "can be improved" = "#C9A0DC")
 
-theme_talk <- theme_minimal(base_size = 30) +
+theme_talk <- theme_minimal(base_size = 30, base_family = "Atkinson Hyperlegible Next") +
   theme(
     plot.background = element_rect(fill = paper, colour = NA),
     panel.background = element_rect(fill = paper, colour = NA),
@@ -59,7 +59,7 @@ theme_talk <- theme_minimal(base_size = 30) +
 ## {.title-slide-own}
 
 ::: {.tt}
-Teaching Git, GitHub, and coding agents to researchers who do not come from IT
+Teaching Git, GitHub, and [AI]{.ai} coding agents to researchers who do not come from IT
 :::
 
 ::: {.ta}
@@ -86,7 +86,9 @@ Or raise a hand, as you prefer.
 ::: {.notes}
 Slide 2. Who in this room is teaching Git, GitHub or coding agents to scientists? Who in this room has had a formal or semi-formal education in teaching and learning, in how adults learn best?
 
-Okay, I see quite a few people up here, that's great. I would love to hear what your education is. Ask one or two of those still standing for one sentence.
+Okay, I see quite a few people up here, that's great. I would love to hear what your education is.
+
+RUN SHEET (proposal of the speaker coach): everyone stands, two questions, one voice with one sentence, then "thank you, please sit". If nobody is left standing: "Nobody. That is why I am giving this talk." If many: one voice only. If the room does not get up within five seconds: hands.
 :::
 
 ## {.adm-slide}
@@ -105,14 +107,20 @@ An environmental engineer who likes computers.
 ::: {.fragment .stay}
 Empathy, patience and persistence.
 :::
+
+::: {.fragment .stay}
+Embedded data steward.
+:::
 :::
 
 ::: {.source}
-Data steward inside a research group of 15 people: Global Health Engineering, ETH Zurich
+I sit with a research group of 15 people, Global Health Engineering, ETH Zurich
 :::
 
 ::: {.notes}
-Slide 3, who speaks. Section 2, 2 minutes with the next slide. The slide from the RDC talk. I am a data steward inside a research group, and I am not a research IT expert.
+Slide 3, who speaks. Section 2, 2 minutes with the next slide. The slide from the RDC talk. I am an embedded data steward: I sit with the group, I am not in a central unit, and I am not a research IT expert.
+
+PROPOSAL, one sentence on why this talk belongs to a day on AI: the fear that keeps people from Git is the same fear that keeps them from agents.
 :::
 
 ## Where this comes from
@@ -126,7 +134,7 @@ Be honest with ourselves, be critical with ourselves, to improve our teaching.
 :::
 
 ::: {.notes}
-Slide 4. The one that I followed is Teaching Tech Together. Me going through that program has highlighted so many things that I've integrated into my teaching, which I today believe are the foundation of why I have found a good way to teach technical concepts to people not from IT, which is largely what our learners are, or at least the learners that I choose to teach.
+Slide 4. The one that I followed is Teaching Tech Together. Going through that program showed me many things that I have built into my teaching. Today I believe they are the reason why I have found a good way to teach technical concepts to people not from IT. That is largely who our learners are, or at least the learners that I choose to teach.
 
 Crucial to all of this is that we find a way to evaluate ourselves, be honest to ourselves, be critical with ourselves to improve our teaching. Be open to applying new methods and realizing certain things that may feel uncomfortable.
 
@@ -156,7 +164,7 @@ Have you ever filmed your own workshop?
 :::
 
 ::: {.source}
-Figure: Greg Wilson, Teaching Tech Together, slides on motivation, CC BY 4.0. Art from openclipart.org.
+Figure: Greg Wilson, slides on motivation for Teaching Tech Together, CC BY-SA. Art from openclipart.org.
 :::
 
 ::: {.notes}
@@ -169,47 +177,45 @@ These are the types of words that we as educators, when we are speaking to our l
 
 ## The expert blind spot
 
-::::: {.columns}
-::: {.column width="50%"}
-### Expert
-
-An error message is a normal step. Read it, act on it.
+::: {.drawing .drawing-wide .drawing-tight}
+```{r}
+#| label: drawing-blindspot
+#| output: asis
+cat("```{=html}", readLines(here::here("slides", "img", "drawing-blindspot.svg")), "```", sep = "\n")
+```
 :::
-
-::: {.column width="50%"}
-### Novice
-
-An error message is proof that I did something wrong.
-:::
-:::::
 
 ::: {.key}
 Experts design their teaching from their own mental model. Novices receive too many uncertainties.
 :::
 
 ::: {.source}
-Greg Wilson, Teaching Tech Together (2019), chapter 3, Expertise and Memory, and chapter 2, Mental Models and Formative Assessment
+Definition: Greg Wilson, Teaching Tech Together (2019), chapters 2 and 3. The error message example and the drawing are mine.
 :::
 
 ::: {.notes}
 Slide 6. Experts can no longer imagine what it is like to not see the world that way. They often betray their blind spot by using the word "just". Novices do not yet have a usable mental model of the problem domain.
 
 I check for my expert blind spots and always put myself into the learner's seat.
+
+One of my own, from last week: in a room of 30 data professionals I never said what version control is. More of these at the end.
 :::
 
 ## No gene for coding
 
 ::::: {.columns}
-::: {.column width="58%"}
-- 778 university course grade distributions
-- **5.8%** showed signs of two groups
-- Professors who believed in innate talent were more likely to see two groups
+::: {.column width="46%"}
+- 778 computer science classes at one university
+- **5.8%** showed signs of two groups: about one class in twenty
+- 53 professors looked at unclear grade charts: those who believed in innate talent saw two groups more often
 :::
 
-::: {.column width="41%"}
-::: {.placeholder}
-Photo
-:::
+::: {.column .drawing width="53%"}
+```{r}
+#| label: drawing-humps
+#| output: asis
+cat("```{=html}", readLines(here::here("slides", "img", "drawing-humps.svg")), "```", sep = "\n")
+```
 :::
 :::::
 
@@ -218,11 +224,11 @@ Patitsas et al. (2016), cited in Greg Wilson, Teaching Tech Together (2019), cha
 :::
 
 ::: {.notes}
-Slide 7. PLACEHOLDER: a photo or similar.
+Slide 7. First cut if the rehearsal runs over; then one sentence over slide 6. The drawing is a sketch without data.
 
 They might have even been told that they are not capable of learning technical topics, that there may be something like a gene or a talent for computational topics, which goes beyond our individual capacity.
 
-Most of these things we know today are wrong. They've been disproven. But there's still a lot to learn about how adults actually learn when they're learning technical topics. And it has a lot to do with motivation.
+The evidence does not support it: people see signs of a gene where none exists. One test in twenty gives a false alarm, so 5.8% is about what chance alone produces. But there's still a lot to learn about how adults actually learn when they're learning technical topics. And it has a lot to do with motivation.
 :::
 
 ## What motivates adults to learn
@@ -244,7 +250,7 @@ An early win comes first. The pre-work is that early win.
 :::::
 
 ::: {.source}
-Figure and wording: Greg Wilson, Teaching Tech Together, slides on motivation, CC BY 4.0. Art from openclipart.org.
+Figure and wording: Greg Wilson, slides on motivation for Teaching Tech Together, CC BY-SA. Art from openclipart.org.
 :::
 
 ::: {.notes}
@@ -272,11 +278,11 @@ Achievement leads to motivation, so an early win comes first, no matter how smal
 :::::
 
 ::: {.source}
-Figure and wording: Greg Wilson, Teaching Tech Together, slides on motivation, CC BY 4.0. Art from openclipart.org.
+Figure and wording: Greg Wilson, slides on motivation for Teaching Tech Together, CC BY-SA. Art from openclipart.org.
 :::
 
 ::: {.notes}
-Slide 9. Here are my slides on demotivation. Then 30 seconds of silence. Count them.
+Slide 9. And this is what takes motivation away: unpredictability, unfairness, indifference. Then the question, and 30 seconds of silence. Count them.
 :::
 
 ## Five things I do
@@ -295,13 +301,51 @@ Said: words I leave out (one glance back). Design for the novice, with an exampl
 On the slide, not said: know the learners, a learner account.
 :::
 
+## Embedded
+
+::::: {.columns}
+::: {.column width="44%"}
+::: {.fragment .stay}
+- **I see them every day:** a check-in when I arrive, another when I leave
+:::
+
+::: {.fragment .stay}
+- **Informal meetings:** someone shares something, or we end up on an AI or data topic
+:::
+
+::: {.fragment .stay}
+- **That is where the learner persona comes from.** Without it I could not design the material.
+:::
+
+::: {.fragment .stay}
+- **What it costs:** one position in a group of 15, TODO share of my week on teaching
+:::
+:::
+
+::: {.column .drawing width="55%"}
+```{r}
+#| label: drawing-embedded
+#| output: asis
+cat("```{=html}", readLines(here::here("slides", "img", "drawing-embedded.svg")), "```", sep = "\n")
+```
+:::
+:::::
+
+::: {.notes}
+Slide 10b. I am an embedded data steward, and that belongs here. I have a personal relationship with the people in the group. I see them every day, I check in with them when I arrive at the office and when I leave. I have what I call informal meetings, in which they end up sharing something, or we discuss an AI topic or a data topic.
+
+That is highly important to understand their needs for teaching. Without it I could not design good teaching material. I know the learner persona extremely well. The survey is how I get to know a room of strangers. This is how I know the group. The survey a central unit can copy. The daily contact needs a person placed in the group.
+
+TODO, my numbers: the share of my week that goes to teaching, who pays for the position, what happens when I am away.
+:::
+
 ## Commits by group member: each bar is one person
 
 ```{r}
 #| label: plot-commits-by-person
 #| fig-width: 15
 #| fig-height: 6.2
-persons |>
+bars <- persons |>
   mutate(
     who = case_match(
       workshop,
@@ -309,35 +353,51 @@ persons |>
       "participant" ~ "trained in a workshop",
       "none" ~ "not trained"
     ),
-    who = factor(who, levels = c("me", "trained in a workshop", "not trained"))
-  ) |>
-  ggplot(aes(x = rank, y = commits, fill = who)) +
-  geom_col(width = 0.8) +
+    # Height on a square root scale; the solid part is the share of
+    # commits written with an agent.
+    height = sqrt(commits),
+    solid = if_else(commits > 0, height * assisted / commits, 0)
+  )
+
+label_size <- 9
+deck_font <- "Atkinson Hyperlegible Next"
+
+ggplot(bars, aes(x = rank, fill = who)) +
+  geom_col(aes(y = height), width = 0.8, alpha = 0.3) +
+  geom_col(aes(y = solid), width = 0.8) +
   geom_point(
-    data = \(d) filter(d, workshop == "participant", commits == 0),
-    aes(y = 0), colour = accent, size = 7, show.legend = FALSE
+    data = filter(bars, workshop == "participant", commits == 0),
+    aes(y = 0), colour = accent, size = 9
   ) +
+  annotate("text", x = 1.55, y = 34, label = "me", hjust = 0, size = label_size, colour = ink, fontface = "bold", family = deck_font) +
+  annotate("text", x = 2.55, y = 21, label = "trained in a workshop", hjust = 0, size = label_size, colour = accent, fontface = "bold", family = deck_font) +
+  annotate("text", x = 7.6, y = 8.5, label = "not trained", hjust = 0, size = label_size, colour = "#4A453E", fontface = "bold", family = deck_font) +
+  annotate("text", x = 8, y = 30, label = "solid part of a bar:\ncommits written with an agent", hjust = 0, size = label_size, colour = ink, lineheight = 0.9, family = deck_font) +
   annotate(
-    "text", x = 32, y = 40, label = "7 of 14 trained:\nno commit on GitHub",
-    size = 9, colour = accent, lineheight = 0.9, fontface = "bold"
+    "text", x = 14, y = 5.5, label = "7 of 14 trained:\nno commit on GitHub",
+    size = label_size, colour = accent, lineheight = 0.9, fontface = "bold", family = deck_font
   ) +
-  scale_fill_manual(values = c("me" = ink, "trained in a workshop" = accent, "not trained" = grey)) +
-  scale_y_sqrt(expand = expansion(mult = c(0.02, 0.05))) +
+  scale_fill_manual(values = c("me" = ink, "trained in a workshop" = accent, "not trained" = "#8A8378"), guide = "none") +
+  scale_y_continuous(expand = expansion(mult = c(0.02, 0.05))) +
   coord_cartesian(clip = "off") +
   theme_talk +
   theme(axis.text.y = element_blank())
 ```
 
 ::: {.source}
-Commits by people on GitHub, November 2025 to October 2026. Data: ghedata, snapshot of 11 November 2026. The height of the bars is on a square root scale.
+Commits by the 17 group members on GitHub, November 2025 to October 2026, students not counted. Data: ghedata, snapshot of 11 November 2026. The height of a bar is on a square root scale; the solid part is the share of its commits written with an agent.
 :::
 
 ::: {.notes}
-Slide 11. Section 6, 4 minutes with the next five slides. Then I want to show the graphic of our number of commits on Git and GitHub, and how we are transforming how people use these technologies in our group.
+Slide 11. Section 6, 4 minutes with the next slides. This is where the group stands with Git and GitHub, one year of commits. The group has seen this chart.
 
-Each bar is one group member. The first bar is me. Purple marks the 14 people trained in our workshops. The 7 dots at the end are trained people with no commit on GitHub. They might have committed their work, but not pushed. Commit and push, commit and push.
+Each bar is one group member. The first bar is me. Purple marks the 14 people trained in our workshops, the two grey bars are group members who did not take one. Students are not part of this chart. The solid part of a bar is the share of commits written with an agent.
 
-OPEN: the window is November 2025 to October 2026. The Agents for Scientists workshop was on 29 September 2026, so for some of the 7 the window after the workshop is one month. Look at the 7 before the talk.
+The 7 dots at the end are trained people with no commit on GitHub. This is where my own method did not reach, and I do not know yet why. For some of them the Agents for Scientists workshop of 29 September was one month before the end of this window.
+
+CHECK: slide 3 says a group of 15, this chart has 17 bars (me, 14 trained, 2 not trained).
+
+OPEN: look at the 7 before the talk.
 :::
 
 ## GitHub activity as an indicator for competency?
@@ -351,39 +411,61 @@ A reviewer of one of our proposals, April 2026, on commits and repository counts
 :::
 
 ::: {.fragment .key}
-They show the shift towards actively working with version control. That is the aim.
+They show who works with version control today. Everyone working with it is the aim.
 :::
 
 ::: {.notes}
-Slide 12. Commits, pull requests, comments and so on may be imperfect proxies for competency or research quality, but they show the shift towards actively working with version control systems, which is the aim. Once we have everyone using the tools comfortably, we can increase our overall potential for collaborative work that leads to competency and quality.
+Slide 12. Commits, pull requests, comments and so on may be imperfect proxies for competency or research quality, but they show who is actively working with version control systems today, and everyone working with them is the aim. Once we have everyone using the tools comfortably, we can increase our overall potential for collaborative work that leads to competency and quality.
 :::
 
-## {.mind-slide}
+## An open question
+
+```{r}
+#| label: assisted-share
+share <- persons |>
+  group_by(workshop) |>
+  summarise(commits = sum(commits), assisted = sum(assisted))
+
+pct <- function(w) round(100 * share$assisted[share$workshop == w] / share$commits[share$workshop == w])
+n_of <- function(w, col) format(share[[col]][share$workshop == w], big.mark = ",")
+```
 
 ::::: {.columns}
 ::: {.column width="50%"}
-### Fixed mindset
-
-::: {.quote}
-"I'm not good."
+::: {.words}
+7 of 14
 :::
+
+people **trained in a workshop** have commits on GitHub
 :::
 
 ::: {.column width="50%"}
-### Growth mindset
-
-::: {.quote}
-"I can learn."
+::: {.words}
+`r pct("participant")`%
 :::
+
+of their commits are written with an agent
 :::
 :::::
 
 ::: {.key}
-Nobody is forced to learn a tool.
+What does a novice learn about Git when the agent writes the commit?
+:::
+
+::: {.fragment}
+I have the data and no answer. If you study how people learn, I would like to find out with you.
+:::
+
+::: {.source}
+`r n_of("participant", "assisted")` of `r n_of("participant", "commits")` commits by the 14 trained people. Same data as the chart before.
 :::
 
 ::: {.notes}
-Slide 13. We're seeing a shift, and particularly a shift in how comfortable people feel about using the tools. And having addressed their fears, they now believe they can do it. They've applied a growth mindset to themselves. And that in itself is the best goal we can have as teachers: to change the perception of our learners and bring them back to believing in themselves, being capable of learning, which then can have better outcomes than being told that you have to learn a certain tool, or that we should force every PhD to learn Git.
+Slide 13 (replaced on 24 November: the slide with fixed and growth mindset is out, the term stays in my words).
+
+The aim of all of this is a growth mindset: "I can learn" in place of "I'm not good". Nobody is forced to learn a tool. I see it in the informal meetings, and I cannot show it with commits. The book I build on says itself that growth mindset may have been oversold.
+
+What the data does show is this: half of the people trained in a workshop have commits on GitHub, and they write most of those commits with an agent. What does a novice learn about Git when the agent writes the commit? I have the data and no answer. If you study how people learn, I would like to find out with you.
 :::
 
 ## Voices from GHE
@@ -398,14 +480,64 @@ Slide 14. PLACEHOLDER. Only if I manage to give the talk to the group before 30 
 
 ## Why Git first, then agents
 
-- **The folder is the unit of an output:** a manuscript, a dataset, a piece of software
-- **Tasks are attached where they belong:** as issues in the issue tracker, not buried in email, Asana or Todoist
-- **Version control connects a prompt to its changes**
+::::: {.columns}
+::: {.column width="40%"}
+- **The folder is the unit of an output**
+- **Tasks are attached where they belong**
+- **Version control keeps a prompt with its change**
+:::
+
+::: {.column .drawing width="59%"}
+```{r}
+#| label: drawing-folder
+#| output: asis
+cat("```{=html}", readLines(here::here("slides", "img", "drawing-folder.svg")), "```", sep = "\n")
+```
+:::
+:::::
 
 ::: {.notes}
 Slide 15. And it moves people into a different mindset for project and folder organization, file management and so on. The folder as the unit of an output, a manuscript, a dataset, a piece of software, to which tasks, issues, are attached where they belong: in the issue tracker, not separate from the folder itself and buried in email, Asana, Todoist and the likes.
 
-These elements are what opens people up to using agentic AI. The Git for Scientists work is agents work too.
+These elements are what opens people up to using agentic AI. The Git for Scientists work is agents work too. On 29 September the group took the second workshop, Agents for Scientists.
+
+And the third point: when an agent changes files, version control keeps what was asked together with what changed. One case on the next slide.
+:::
+
+## One case: this deck
+
+::::: {.columns}
+::: {.column width="33%"}
+### 1. My words
+
+`outline.md`, commit `9434179`: the talk in my own words
+:::
+
+::: {.column width="33%"}
+### 2. The agent's commit
+
+`d2d6cf1`: "rebuild the deck from the outline", with the line `Co-Authored-By: Claude`
+:::
+
+::: {.column width="33%"}
+### 3. The change
+
+419 lines added, 76 removed, in 7 files. Each one can be read and taken back.
+:::
+:::::
+
+::: {.key}
+What I asked for, who wrote it and what changed sit in one history.
+:::
+
+::: {.source}
+<https://github.com/Global-Health-Engineering/talk-enhancer>
+:::
+
+::: {.notes}
+Slide 15b (added 24 November), 45 seconds. This deck is the case. I wrote the talk in my own words into one file and committed it. The agent rebuilt the slides from that file, and its commit carries a line that says so. The change is 419 lines in 7 files, and I can read every one of them and take any of them back. Without the folder and its history, I would have a chat window and a result.
+
+CHECK: the two commits are public once dev is pushed.
 :::
 
 ## {.words-slide}
@@ -420,6 +552,8 @@ What terrible wording for a more powerful chat window.
 
 ::: {.notes}
 Slide 16. What terrible wording for a more powerful chat window.
+
+One clause for the experts in the room: a chat window that can also read and change the files in my folder and run commands, with my rights. That is why the folder and its history come first.
 :::
 
 ## Research Data Conference 2026: experts as learners
@@ -433,7 +567,7 @@ Slide 16. What terrible wording for a more powerful chat window.
 Slide 17. Section 7, 3 minutes with the next four slides. I myself apply these principles in my own teaching. Last week I was at the Research Data Conference and I taught my first hour of my Git for Scientists workshop. All participants worked through the pre-work tasks. They completed them, some in time, some didn't.
 :::
 
-## Who was in the room
+## 14 of 27 were new to Git or used it now and then
 
 ```{r}
 #| label: plot-git-experience
@@ -442,13 +576,17 @@ Slide 17. Section 7, 3 minutes with the next four slides. I myself apply these p
 survey |>
   filter(question == "git_experience") |>
   mutate(answer = factor(answer, levels = rev(c("never", "now and then", "regularly", "extensively")))) |>
-  ggplot(aes(x = n, y = answer)) +
-  geom_col(fill = accent, width = 0.7) +
-  geom_text(aes(label = n), hjust = -0.4, size = 11, colour = ink) +
+  ggplot(aes(x = n, y = answer, fill = answer %in% c("never", "now and then"))) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = n), hjust = -0.4, size = 11, colour = ink, family = "Atkinson Hyperlegible Next") +
+  scale_fill_manual(values = c("TRUE" = accent, "FALSE" = grey), guide = "none") +
   scale_x_continuous(expand = expansion(mult = c(0, 0.12))) +
-  labs(title = "How much have you used Git? (n = 27)") +
   theme_talk
 ```
+
+::: {.source}
+"How much have you used Git?", 27 answers in the pre-course survey
+:::
 
 ::: {.notes}
 Slide 18. 27 answers in the pre-course survey: 10 data stewards, 5 researchers, 2 librarians, 10 other roles. 16 teach Git or plan to. Half are new to Git or use it now and then.
@@ -561,7 +699,7 @@ Additional initial explanations: e.g. Git vs GitHub, data protection, actions pu
 ::::::::::::
 
 ::: {.source}
-Four flipcharts, two colours of post-it notes. The number in each field is the count of notes from the room, 65 in all.
+Four flipcharts, two colours of post-it notes. The number in each field is the count of notes from the room, 65 in all. Rubric after Greg Wilson, Teaching Tech Together, chapter 8, and his slides on feedback; the column Preparation is mine.
 :::
 
 ::: {.notes}
@@ -572,16 +710,40 @@ Six clicks, each pastes one note, in the words of the room. First my own blind s
 CHECK: the six texts against the photos (IMG_4823, 4840, 4861, 4871, 4814, 4865). On the last one the note reads "complet".
 :::
 
+## A feedback form people fill in
+
+::::: {.columns}
+::: {.column width="40%"}
+- **Short, and in the room:** the last 15 minutes of the workshop
+- **One scale:** 3 means my expectations were fully met
+- **The rest in words:** four areas, with time to think, pair, share
+:::
+
+::: {.column .drawing width="59%"}
+```{r}
+#| label: drawing-form
+#| output: asis
+cat("```{=html}", readLines(here::here("slides", "img", "drawing-form.svg")), "```", sep = "\n")
+```
+:::
+:::::
+
+::: {.notes}
+Slide 20b (added 24 November). Candidate for a cut: it adds about one minute.
+
+Feedback forms need to be engaging, short and collected at the end of the workshop. Scales tell me little: on a five point scale most answers land on 4 and 5. The one scale I use tells people that 3 means "my expectations were fully met". The rest is feedback in words, briefly introduced as the four areas that matter, with time to think, pair and share.
+
+CHECK before I cite it: Keeley et al. (2013) on the ceiling effect in evaluations of teaching. That 3 as "fully met" spreads the answers is practice, I found no study that shows it.
+:::
+
 ## The loop
 
-::: {.loop}
-Teach
-
-Collect on post-its
-
-Turn into data
-
-Change the material
+::: {.drawing .drawing-wide}
+```{r}
+#| label: drawing-loop
+#| output: asis
+cat("```{=html}", readLines(here::here("slides", "img", "drawing-loop.svg")), "```", sep = "\n")
+```
 :::
 
 ::: {.notes}
@@ -590,16 +752,17 @@ Slide 21. First cut if the talk runs long. Everything I've learned about this on
 
 ## {.words-slide}
 
-::: {.placeholder .wide}
-Close: to be written
-:::
-
-::: {.key}
+::: {.quote .large}
 If you teach a technical tool, take an instructor training.
 :::
 
+- [The Carpentries Instructor Training](https://carpentries.github.io/instructor-training/): open, online
+- The expert blind spot "can be overcome with training" (Wilson 2019, chapter 3)
+
 ::: {.notes}
-Slide 22. Section 8, 1 minute with the last slide. PLACEHOLDER: closing words not written yet. The key line is one of three candidates in the outline. The other two: film one session and count "just", "quickly", "easily"; or the opening again, "Please stand up if you will look at your teaching material differently next week."
+Slide 22. Section 8, 1 minute with the last slide. Close chosen on 24 November: take an instructor training. It answers the second question of the opening.
+
+PROPOSAL for the closing words, mine to rewrite: At the start I asked who has had training in how adults learn. I had none until 2020. One course changed how I teach, and it is open to all of you. If you teach a technical tool, take an instructor training. And if you study how people learn, or you wonder what it takes to place someone like me in a group, come and find me.
 :::
 
 ## Thank you
@@ -612,9 +775,42 @@ Slide 22. Section 8, 1 minute with the last slide. PLACEHOLDER: closing words no
 
 **Funding and support:** [Swiss Reproducibility Network (SwissRN)](https://www.swissrn.org/contents/community/nodes/) local node at ETH Zurich & [Data Stewardship Network at ETH Zurich](https://library.ethz.ch/en/researching-and-publishing/data-management-and-policies/research-data-management/data-stewardship.html), funded by the [swissuniversities Open Science Programme](https://www.swissuniversities.ch/en/topics/open-science/open-science-programme) & [Global Health Engineering group at ETH Zurich](https://ghe.ethz.ch/)
 
+**Licence:** this deck is shared under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), except the two slides on motivation, which adapt slides by Greg Wilson and stay under CC BY-SA.
+
 **Declaration of AI use:** to be written, as for the DSN talk.
 :::
 
 ::: {.notes}
 Slide 23. OPEN: the second course site (Agents for Scientists) and the declaration of AI use.
 :::
+
+## Backup: why GitHub and not the ETH GitLab, for now
+
+- **A portfolio that stays:** people leave ETH with a public profile and their repositories
+- **Open by default:** what can be public is public, and others outside ETH can work with us
+- **One interface for everything:** workshops, repositories and agents are run through the GitHub API
+- **A website from any repository:** GitHub Pages
+- **It carries over:** the next employer most likely uses GitHub
+
+::: {.key}
+Not everything belongs there. The data management strategy will decide what goes to the ETH GitLab.
+:::
+
+::: {.notes}
+Backup slide, for the question "Why not the GitLab of ETH?". From my notes of the practice run with the group on 16 November 2026.
+
+It is a question I often get, and a good one. There is a lot that can and should be on GitLab. The reasons we are on GitHub so far:
+
+One, my first motivation was and still is to give people something to show once they have left ETH: a public portfolio, a GitHub profile with their repositories. It fits the open by default part of our data, which can be public without restrictions.
+
+Two, administration. I have always run my classes with the R package ghclass, which invites people to a GitHub organisation through the GitHub API. The API works extremely well, also with an agent. I do not know yet how I would do the same on the ETH GitLab servers.
+
+Three, GitHub carries over. Whoever goes to work somewhere else can use what they learned.
+
+Four, collaboration outside our group, the same reason we use Google Workspace.
+
+Five, publishing. Any repository can become a website through GitHub Pages. CHECK before I say it: what the ETH GitLab offers for pages and continuous integration today.
+
+The limit: for some of our work it should be GitLab, for data that is not public and has to stay on servers of ETH. ETH has clear classes (public, internal, confidential, strictly confidential), and our data management strategy will decide along those what goes where. The cost is one more platform and more to teach.
+:::
+
