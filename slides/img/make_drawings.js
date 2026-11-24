@@ -35,8 +35,8 @@ embedded.push(line([[595, 40], [690, 5], [785, 40]], { sw: 3 }));
 for (const wx of [632, 676, 720]) embedded.push(rect(wx, 70, 26, 30));
 embedded.push(text(690, 170, "central unit", { size: 30, bold: true, anchor: "middle" }));
 embedded.push(line([[690, 215], [680, 300], [610, 360], [505, 385]], { curve: true, dash: true, sw: 3, stroke: grey }));
-embedded.push(text(640, 400, "many groups,", { size: 24, color: "#4A453E" }));
-embedded.push(text(640, 430, "one long line", { size: 24, color: "#4A453E" }));
+embedded.push(text(575, 405, "many groups,", { size: 32, bold: true }));
+embedded.push(text(575, 443, "one long line", { size: 32, bold: true }));
 
 // Drawing 2: the folder, its tasks and its history ------------------------
 const folder = [];
@@ -255,7 +255,10 @@ function excalidrawOf(shapes) {
 
 for (const [name, shapes] of [["embedded", embedded], ["folder", folder], ["learner", learner],
   ["blindspot", blindspot], ["humps", humps], ["loop", loop], ["form", form]]) {
-  fs.writeFileSync(path.join(out, `drawing-${name}.svg`), svgOf(shapes, 800, 600));
+  // A tighter view box for drawings that leave the edges of the canvas empty.
+  const boxes = { embedded: "15 0 790 595", humps: "20 95 765 410", loop: "15 25 770 545", blindspot: "40 15 720 550", form: "25 15 770 570" };
+  const svg = svgOf(shapes, 800, 600).replace('viewBox="0 0 800 600"', `viewBox="${boxes[name] || "0 0 800 600"}"`);
+  fs.writeFileSync(path.join(out, `drawing-${name}.svg`), svg);
   fs.writeFileSync(path.join(out, `drawing-${name}.excalidraw`), excalidrawOf(shapes));
 }
 console.log("written");

@@ -195,6 +195,20 @@ The deck was changed on 24 November along the committee's findings and my decisi
 - Backup slide after "Thank you": why GitHub and not the ETH GitLab, for now, from my notes of the practice run with the group on 16 November 2026.
 - Not changed: the cuts (the rehearsal decides), slide 14, the declaration of AI use, the second course site.
 
+## Changes of 24 November, after my feedback per slide
+
+- Slide 2: two columns in large type, both as "Sit down if ..."; the line on raising a hand is out.
+- Slide 3: no source line; I say where I sit.
+- Slide 6: drawing and key text side by side. Slide 7: shorter bullets, larger sketch; the detail is in the notes.
+- Slide 8: key line "The pre-work gives everyone an early win." Slide 9: 20 seconds, just with yourself.
+- Three section slides: "How I teach", "What changes in the group", "Last week's workshop". The deck has 30 slides with them.
+- Slide 10b: keywords only (every day, informal meetings, learner persona, what it costs).
+- Slide 11: dashed lines at 100, 500 and 1,000 commits; the source line says why the scale is compressed.
+- Slide 12 and 16: quotes in purple with a bar on the left. Slide 13: the two numbers in two colours.
+- Slide 17: three boxes (before, hour 1, hour 2) in place of four bullets.
+- Slide 20: larger type; six short notes, three to improve (preparation, interaction, content) and three that went well (preparation, presentation, content). The note on version control under presentation is out.
+- Slides 20b and 21: larger drawings.
+
 ## Open TODOs
 
 1.  Slide 5 and slide 7: choose the photos.
@@ -202,3 +216,30 @@ The deck was changed on 24 November along the committee's findings and my decisi
 3.  Slide 14: voices from the group, decide after Thursday 26 November.
 4.  Section 8: closing words and the closing slide.
 5.  Slide 10b: a slide of its own or two sentences over slide 3; which point of slide 10 gives up its time.
+
+## Changes of 24 November, after the first timed run
+
+The first timed run took 23:39 for the 20 minute slot. Planned and spoken time per section:
+
+| Section | Planned | Spoken |
+|---|---|---|
+| 1. Opening, everyone stands up | 2:00 | 1:02 |
+| 2. Where my teaching comes from | 2:00 | 2:12 |
+| 3. Just, quickly, easily | 3:00 | 2:50 |
+| 4. Motivation and demotivation | 3:00 | 2:43 |
+| 5. How I teach | 2:00 | 3:23 |
+| 6. What changes in the group | 4:00 | 6:39 |
+| 7. Last week's workshop | 3:00 | 4:11 |
+| 8. Close | 1:00 | 0:39 |
+
+What changed in the deck after it (30 slides, 25 in the main run, target 18:30):
+
+- New order of the first part: stand up, who I am, where this comes from, the expert blind spot, no gene for coding, what motivates, what takes motivation away, then "just, quickly, easily" behind the 20 seconds.
+- The section slide "How I teach" is out. "Embedded" opens the section "What changes in the group", followed by a new slide from my talk at the Research Data Conference ("The tools and the teaching come from inside the group", five lines from 2021 to 2027), the commits chart and the open question.
+- "Why Git first, then agents" is replaced by two slides from my slides for the DSN Community Meeting 2026: "Git for Scientists: teaching the need to know" and "Agents for Scientists: handing the need to know over", with the key line "So that we can still prove what is human." "One case: this deck" follows.  The first of the two starts with the commit.
+- Out of the deck: Voices from GHE, the quote on the naming of Claude Code and Codex, The failure of the day (one sentence of it is in the notes of the rubric).
+- The section "Last week's workshop" is now "Ask the learners".
+- Rubric: no counts per field, the note under Content shortened.
+- A new section "Additional slides" at the end: Five things I do, the folder drawing, GitHub activity as an indicator for competency, GitHub and the ETH GitLab.
+- Embedded: larger drawing, the label "many groups, one long line" in larger bold type. The group is 15 people today, 17 over the twelve months of the chart.
+- Notes: scripts of about 60 seconds for the two motivation slides; the study on slide "No gene for coding" described correctly ("the evidence does not support it", 53 instructors, nobody gave grades); Embedded without the two asides; the form without a comparison to online ratings.
