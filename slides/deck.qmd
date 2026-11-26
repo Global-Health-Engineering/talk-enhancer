@@ -65,7 +65,7 @@ Teaching Git, GitHub, and [AI]{.ai} coding agents to researchers who do not come
 :::
 
 ::: {.ta}
-Lars Schöbitz, Global Health Engineering, ETH Zurich
+[Lars Schöbitz](https://www.linkedin.com/in/larsschoebitz), Global Health Engineering, ETH Zurich
 
 EnhanceR Symposium 2026, Paul Scherrer Institute, 30 November 2026
 :::
@@ -911,8 +911,24 @@ If you teach a technical tool, take an instructor training.
 
 ## Thank you
 
-- Git for Scientists, open educational resource: <https://github.com/gitforsci>
-- Slides and data of this talk: <https://github.com/Global-Health-Engineering/talk-enhancer>
+::::: {.columns .thanks}
+::: {.column width="42%"}
+**Lars Schöbitz**\
+Global Health Engineering, ETH Zurich
+
+[github.com/larnsce](https://github.com/larnsce)\
+[linkedin.com/in/larsschoebitz](https://www.linkedin.com/in/larsschoebitz)\
+Newsletter (German and English): [buttondown.com/bitz](https://buttondown.com/bitz)
+:::
+
+::: {.column width="57%"}
+**Git for Scientists,** open educational resource\
+[github.com/gitforsci](https://github.com/gitforsci)
+
+**Slides and data of this talk**\
+[github.com/Global-Health-Engineering/talk-enhancer](https://github.com/Global-Health-Engineering/talk-enhancer)
+:::
+:::::
 
 ::: {.ack}
 **Cite as:** Schöbitz, L. (2026). Git for Scientists (v1.0.0). Zenodo. <https://doi.org/10.5281/zenodo.21703566>
