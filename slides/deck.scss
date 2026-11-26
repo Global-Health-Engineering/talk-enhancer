@@ -175,3 +175,8 @@ $presentation-h3-font-size: 1.1em;
 // The reference list sits in the small print of the thank you slide.
 .reveal .ack #refs { margin-top: 0.2em; }
 .reveal .ack #refs .csl-entry { margin-bottom: 0.2em; }
+
+// Thank you slide: my details on the left, the two repositories on the right.
+.reveal .thanks { font-size: 0.95em; margin-top: 0.6em; }
+.reveal .thanks p { margin: 0 0 0.7em 0; line-height: 1.35; }
+.reveal .thanks + .ack { margin-top: 0.8em; }
