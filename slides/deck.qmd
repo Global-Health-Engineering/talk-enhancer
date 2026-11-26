@@ -1,7 +1,9 @@
 ---
 # Built from outline.md. Slide numbers in the notes follow the outline.
-# The speaker notes hold my words from the outline.
+# The speaker notes hold my words from the outline and from the rehearsals of
+# 24 and 26 November, as keywords in bold with the sentence behind them.
 pagetitle: "Teaching Git, GitHub, and AI coding agents"
+bibliography: references.bib
 lang: en-GB
 format:
   revealjs:
@@ -69,7 +71,11 @@ EnhanceR Symposium 2026, Paul Scherrer Institute, 30 November 2026
 :::
 
 ::: {.notes}
-Slide 1. Section 1, 2 minutes with the next slide. On the screen before the talk.
+**Slide 1, title.** On the screen before the talk.
+
+- **Thanks** for the introduction.
+- **The title:** the organisers added "AI" to it, and it fits the day.
+- **Who I am:** Lars, Global Health Engineering, ETH Zurich.
 :::
 
 ## Please stand up
@@ -89,13 +95,18 @@ Slide 1. Section 1, 2 minutes with the next slide. On the screen before the talk
 :::::
 
 ::: {.notes}
-Slide 2. Everyone up, please. Then two clicks: sit down if you do not teach; sit down if you have had no formal or semi-formal training in how adults learn.
+**Slide 2, 1 minute.** Everyone up, then two clicks.
 
-Who in this room is teaching Git, GitHub or coding agents to scientists? Who in this room has had a formal or semi-formal education in teaching and learning, in how adults learn best?
+- **Ask:** please stand up.
+- **CLICK. Sit down** if you do not teach Git, GitHub or coding agents to researchers.
+- **CLICK. Sit down** if you have had no formal or semi-formal training in how adults learn.
+- **Those still standing** teach and have had training in how adults learn. My talk is the argument that all of us should, especially when we work with novices in technical topics.
 
-Okay, I see quite a few people up here, that's great. I would love to hear what your education is.
+**If the room reacts differently:**
 
-RUN SHEET (proposal of the speaker coach): everyone stands, two questions, one voice with one sentence, then "thank you, please sit". If nobody is left standing: "Nobody. That is why I am giving this talk." If many: one voice only. If the room does not get up within five seconds: hands.
+- **Nobody left standing:** "Nobody. That is why I am giving this talk."
+- **Many left standing:** one voice with one sentence, then "thank you, please sit".
+- **Nobody gets up within five seconds:** hands.
 :::
 
 ## {.adm-slide}
@@ -121,9 +132,24 @@ Embedded data steward.
 :::
 
 ::: {.notes}
-Slide 3, who speaks. Section 2, 2 minutes with the next slide. The slide from the RDC talk. I am an embedded data steward: I sit with the group, I am not in a central unit, and I am not a research IT expert.
+**Slide 3, who speaks. 1 minute.** Three clicks.
 
-PROPOSAL, one sentence on why this talk belongs to a day on AI: the fear that keeps people from Git is the same fear that keeps them from agents.
+- **No doctorate, no statistics, no computer science degree.** It helps me when I teach novices technical topics such as Git and GitHub.
+- **CLICK. Environmental engineer who likes computers.** If my sister had been given the computer at the age that I was, she would be standing here today.
+- **CLICK. Empathy, patience and persistence.** These topics are hard, and people may have had bad experiences with technical topics. Persistence: I do not give up when someone does not like it on the first day.
+- **CLICK. Embedded data steward:** I work inside one research group. My purpose is to support the group in learning technical topics and in its data management. I am not in a central unit and I am not a research IT expert.
+
+**Optional, one sentence** on why this talk belongs to a day on AI: the fear that keeps people from Git is the same fear that keeps them from agents.
+:::
+
+## {.section-slide}
+
+::: {.section-title}
+How adults learn
+:::
+
+::: {.notes}
+**Section slide.** No words. Take a breath, then click.
 :::
 
 ## Where this comes from
@@ -137,11 +163,14 @@ Be honest with ourselves, be critical with ourselves, to improve our teaching.
 :::
 
 ::: {.notes}
-Slide 4. The one that I followed is Teaching Tech Together. Going through that program showed me many things that I have built into my teaching. Today I believe they are the reason why I have found a good way to teach technical concepts to people not from IT. That is largely who our learners are, or at least the learners that I choose to teach.
+**Slide 4, 1 minute.**
 
-Crucial to all of this is that we find a way to evaluate ourselves, be honest to ourselves, be critical with ourselves to improve our teaching. Be open to applying new methods and realizing certain things that may feel uncomfortable.
+- **The book:** everything I tell you today, my philosophy and my values, comes from Teaching Tech Together by Greg Wilson, 2019.
+- **The training:** the book comes out of The Carpentries Instructor Training. It is open today, and one of our assistants has recently taken it. Two days of your time.
+- **My route:** I took it in 2020 as the RStudio instructor certification, which Greg Wilson built on the same material.
+- **What it teaches:** to be honest with ourselves and critical with ourselves, to improve our teaching for people who do not come from IT.
 
-Greg Wilson is the co-founder of Software Carpentry, which became part of The Carpentries. Say "co-founder of Software Carpentry"; in the timed run of 24 November I said "founder of the Carpentries".
+**Say** "co-founder of Software Carpentry", never "founder of the Carpentries".
 :::
 
 ## The expert blind spot
@@ -163,15 +192,16 @@ Novices receive too many uncertainties.
 :::::
 
 ::: {.source}
-Definition: Greg Wilson, Teaching Tech Together (2019), chapters 2 and 3. The error message example and the drawing are mine.
+Definition: @wilson2019 [chaps. 2 and 3]. The error message example and the drawing are mine.
 :::
 
 ::: {.notes}
-Slide 6. Experts can no longer imagine what it is like to not see the world that way. They often betray their blind spot by using the word "just". Novices do not yet have a usable mental model of the problem domain.
+**Slide 6, 50 seconds.**
 
-I check for my expert blind spots and always put myself into the learner's seat.
-
-One of my own, from last week: in a room of 30 data professionals I never said what version control is. More of these at the end.
+- **Definition:** teaching material designed by experts follows the mental model of an expert. A novice does not have that model yet.
+- **What novices feel:** we assume things they do not have. They feel lost, their questions stay unanswered, and they receive too many uncertainties to feel comfortable.
+- **The error message:** fixing an error is a normal step for an expert. A novice reads it as: it is me, I did something wrong.
+- **One of my own, from last week:** in a room of data professionals I never said what version control is. More of these at the end.
 :::
 
 ## No gene for coding
@@ -180,7 +210,7 @@ One of my own, from last week: in a room of 30 data professionals I never said w
 ::: {.column width="36%"}
 - 778 computer science classes
 - **5.8%** showed two groups
-- Teachers who believe in talent see two groups
+- That is what chance alone gives
 :::
 
 ::: {.column .drawing width="63%"}
@@ -193,15 +223,25 @@ cat("```{=html}", readLines(here::here("slides", "img", "drawing-humps.svg")), "
 :::::
 
 ::: {.source}
-Patitsas et al. (2016), cited in Greg Wilson, Teaching Tech Together (2019), chapter 10, Motivation and Demotivation
+@patitsas2016, cited in @wilson2019 [chap. 10, Motivation and Demotivation]
 :::
 
 ::: {.notes}
-Slide 7. The drawing is a sketch without data.
+**Slide 7, 40 seconds.** One study only. The drawing is a sketch without data.
 
-Script, 45 seconds: Some learners have been told that they are not made for technical topics, that there is something like a gene or a talent for coding. The evidence does not support it. One study looked at 778 computer science classes at one university. If there were two kinds of people, the grades would show two groups. About one class in twenty did, and that is what the test flags by chance alone. In a second part, 53 instructors looked at grade charts that were unclear. Those who believe in innate talent saw two groups more often. So the belief sits with the teacher. And what does decide whether adults learn has a lot to do with motivation.
+- **The belief:** some people believe there is a gene or a talent for coding. Some can do it, others cannot.
+- **The study:** one study looked at 778 computer science classes at one university.
+- **What the belief predicts:** two groups in the grades, one bump at the low grades and one at the high grades.
+- **What it found:** 5.8% of the classes showed two groups, about one class in twenty. That is what the test flags by chance alone.
+- **So:** the evidence does not support it. What does decide whether adults learn has a lot to do with motivation.
 
-Say "the evidence does not support it", never "disproven". Nobody gave grades in the second part, and 5.8% is the false alarm rate of the test (no "standard error").
+**Facts to keep straight:**
+
+- **One study, one university, 778 classes.** Never "a few studies", never "about 800".
+- **"The evidence does not support it",** never "disproven".
+- **5.8% is the false alarm rate of the test.** No "standard error", no "uncertainties".
+
+**Out since 26 November:** the second part of the study, on what teachers see in unclear grade charts. Nobody gave grades in it.
 :::
 
 ## What motivates adults to learn
@@ -227,13 +267,16 @@ Figure and wording: Greg Wilson, slides on motivation for Teaching Tech Together
 :::
 
 ::: {.notes}
-Slide 8. Script, 60 seconds, from the timed run of 24 November.
+**Slide 8, 60 seconds.**
 
-Three things motivate adults to learn. Self-efficacy: I decide what I learn and when, and nobody forces me. Utility: it helps me reach my goals. Your goals differ from mine, so I have to know them. Community: people I know are learning this with me. Learning is a social process.
+- **Self-efficacy:** people want to be in control of their own life. "You must learn this software" does not help. I can only make offers, and ask as little as possible with each one.
+- **Utility:** it has to help them reach their goals. Your goals as a software engineer are reproducibility, version control, collaboration. Theirs differ. So I help them answer: how does Git help me?
+- **Community:** learning is a social process. We need to be in a room, exchange and learn from peers.
+- **CLICK. Pre-work:** people arrive with a working setup and have explored the topics in their own time. The first hour repeats it, so nothing in that hour is new, and there is room for explanations and questions. That is an early win. If I lose people in the first hour, they are gone.
 
-CLICK. This is why I give pre-work. Everyone does it at home, in their own time. In the first hour of the workshop we do it again together, and it works a second time. That is an early win for everyone in the room, also for those who needed three evenings for it.
+**Do not say:** anything on online courses, videos or MOOCs. I have no source for it.
 
-Say "early win" once. No passage on online courses.
+**Say** "early win" once.
 :::
 
 ## What takes motivation away
@@ -259,13 +302,13 @@ Figure and wording: Greg Wilson, slides on motivation for Teaching Tech Together
 :::
 
 ::: {.notes}
-Slide 9. Script, 60 seconds with the silence.
+**Slide 9, 60 seconds with the silence.**
 
-Three things take motivation away. Unpredictability: I follow the steps on the page and something else happens on my screen, and nobody tells me why. Unfairness: the teacher talks with the advanced people and picks on the others. Indifference: nobody notices whether I keep up.
-
-CLICK. 20 seconds, just with yourself: what might you have done in class that took the motivation away? I will not ask you to share it.
-
-Count to 20 in silence. Then: thank you. Keep it with you for the rest of the day.
+- **Unpredictability:** I tell someone to take a step, and what they see differs from what I told them to expect.
+- **Unfairness:** playing favourites in the room. We are human and we have favourites. Showing it takes the motivation of everyone else.
+- **Indifference:** the feeling that nobody cares whether I keep up. What I do against it: I follow up with people in the room, after a workshop, and especially between two workshops.
+- **CLICK. The 20 seconds,** said once: "20 seconds, just with yourself: what might you have done in class that took the motivation away? I will not ask you to share it." Then count to 20 in silence.
+- **After:** thank you. Maybe you have something to act on in your next class.
 :::
 
 ## {.words-slide}
@@ -295,23 +338,26 @@ Figure: Greg Wilson, slides on motivation for Teaching Tech Together, CC BY-SA. 
 :::
 
 ::: {.notes}
-Moved behind the 20 seconds on 24 November. Transition: some of what takes motivation away sits in the words we use. Do not say "very easily" on this slide; it happened in the timed run.
+**Slide 5, 50 seconds.** Follows the 20 seconds.
 
-Slide 5. Section 3, 3 minutes with the next two slides. PLACEHOLDER: the figure stands in for a photo of someone who looks highly demotivated.
+- **Transition:** something concrete to act on is words like these.
+- **When they come:** when we teach, and especially when we are nervous, we say "you just click here" and "we quickly do this". They come out unnoticed.
+- **What a novice hears:** nothing is worse for a novice than hearing that a step costs nothing while they feel they did not get it. They hear: it is me.
+- **CLICK. Film yourself:** record a workshop, watch it, be honest, and count how often you use these words.
 
-How often in your teaching do you use the words just, quickly, easily? Have you ever observed yourself? Have you ever filmed your own workshop and then assessed how many times you use these words?
+**If one slips out here:** name it ("that is me doing it right now"). It worked in the rehearsal of 26 November.
 
-These are the types of words that we as educators, when we are speaking to our learners, they may slip out unnoticed. But what they can do in a learner is to put them into a seat where they don't believe in being able to learn these concepts themselves. They say that a step costs nothing. A learner who is stuck on it hears: it is me.
+**Placeholder:** the figure stands in for a photo of someone who looks demotivated.
 :::
 
 ## {.section-slide}
 
 ::: {.section-title}
-What changes in the group
+Embedded in a research group
 :::
 
 ::: {.notes}
-Section slide, section 6 of the outline.
+**Section slide.** No words. Take a breath, then click.
 :::
 
 ## Embedded
@@ -345,15 +391,24 @@ cat("```{=html}", readLines(here::here("slides", "img", "drawing-embedded.svg"))
 :::::
 
 ::: {.notes}
-Slide 10b. Four clicks, keywords only. 60 seconds.
+**Slide 10b, 2 minutes.** Four clicks, keywords only.
 
-Every day: I am an embedded data steward. I sit with the group and I see the people every day. Informal meetings: I do not host regular meetings on these topics. People come to me when they see the need, and then they share what they are working on. Learner persona: this is why I know my learners so well and can design the material for them. The survey is how I get to know a room of strangers. The daily contact is how I know the group.
+- **CLICK. Every day:** I have been in the group for five years, as a data steward who also takes care of IT and open science. On every day in the office I go into everyone's office in the morning and greet them, and I try to do the same when I leave.
+- **CLICK. Informal meetings:** these are the moments in which I hear what is hard for people right now: AI, data, publications. I cannot hold a weekly meeting with everyone. Data stewards often say that all their time goes into meetings and emails and none is left to teach. Informal meetings give me the same information, when I do them with intent and act on what I hear.
+- **CLICK. Learner persona:** this is why someone like me is well placed inside the group. I know the people, their competencies, their needs and their fears. That is harder from a central unit. I am not arguing against central units. I am arguing for data stewards inside the groups who coordinate with the central units that provide the services.
+- **CLICK. What it costs:** one permanent position in the group, in place of another doctoral student.
 
-What it costs: one permanent position in the group. The professor chose it over another postdoc. This is harder from a central unit, and the relationship with the learners matters there too.
+**Check before I say it in public:** the percentage of the position, the job class and the amount in francs. I said them in both timed runs.
+:::
 
-CHECK before I say it in public: the percentage of the position and the name of the job class. In the timed run of 24 November I said both.
+## {.section-slide}
 
-Left out on purpose: when I arrive and leave, and the passage on self-efficacy.
+::: {.section-title}
+Git, GitHub and agents in the group: the teaching and the evidence
+:::
+
+::: {.notes}
+**Section slide.** No words. Take a breath, then click.
 :::
 
 ## The tools and the teaching come from inside the group
@@ -367,11 +422,13 @@ Left out on purpose: when I arrive and leave, and the passage on self-efficacy.
 :::
 
 ::: {.notes}
-Added 24 November, the slide from my talk at the Research Data Conference. 40 seconds.
+**45 seconds.** The slide from my talk at the Research Data Conference.
 
-I have been in the group for five years. In the first four I taught Git one to one, to those who were interested, and in my R courses. We have never applied force. It became more structured when we introduced Claude Code in 2025: working responsibly with an agent has Git and GitHub as its foundation. So this year the group took two workshops, Git for Scientists and then Agents for Scientists on 29 September. The next slide shows what that looks like in commits.
-
-FAIR by Doing is proposed and not decided; one clause at most.
+- **2021 to 2025:** the tools and the teaching come from inside the group. I taught Git one to one, and in the R course for bachelor, master and doctoral students.
+- **2025:** early in the year I introduced Claude Code. I wanted everyone to know what this tool can do.
+- **A year later:** I saw that the foundation comes first. Git and GitHub are what makes working with a coding agent safer.
+- **2026:** so now there are two workshops, Git for Scientists and Agents for Scientists.
+- **2027:** both are part of a twelve month programme, FAIR by Doing, proposed for 15 ETH researchers and under review. One clause, no more.
 :::
 
 ## Commits by group member: each bar is one person
@@ -431,15 +488,20 @@ Commits by the 17 group members on GitHub, November 2025 to October 2026, studen
 :::
 
 ::: {.notes}
-Slide 11. Section 6, 4 minutes with the next slides. This is where the group stands with Git and GitHub, one year of commits. The group has seen this chart.
+**Slide 11, 70 seconds.** The group has seen this chart.
 
-Each bar is one group member. The first bar is me. Purple marks the 14 people trained in our workshops, the two grey bars are group members who did not take one. Students are not part of this chart. The solid part of a bar is the share of commits written with an agent. The dashed lines mark 100, 500 and 1,000 commits. They are not evenly spaced: the scale is compressed towards the top (a square root scale), because my bar is ten times the others and they would vanish beside it.
+- **What it shows:** commits by group member over twelve months. Each bar is one person.
+- **Me:** the first bar.
+- **Purple:** the 14 people who took one of my workshops. Two people in the group are not trained.
+- **The scale:** the dashed lines mark 100, 500 and 1,000 commits. They are not evenly spaced: the scale is compressed towards the top, because my bar is ten times the others.
+- **Solid part of a bar:** commits written with an agent. For some people that is every commit, for me about 80%.
+- **The 7 dots:** trained, and no commit on GitHub. I found this when I made the slide. Now I can ask these seven what holds them back.
 
-The 7 dots at the end are trained people with no commit on GitHub. This is where my own method did not reach, and I do not know yet why. For some of them the Agents for Scientists workshop of 29 September was one month before the end of this window.
+**Numbers:** 17 group members over the twelve months, 15 in the group today, 14 of the 17 trained. Students are not in the chart.
 
-The number to say: 17 people were in the group over these twelve months, 15 are here today. 14 of the 17 were trained in a workshop.
+**No detour** into how AI use is declared. That comes later, with this deck as the case.
 
-OPEN: look at the 7 before the talk.
+**Open:** look at the 7 before the talk.
 :::
 
 ## An open question
@@ -485,11 +547,13 @@ I have the data and no answer. If you study how people learn, I would like to fi
 :::
 
 ::: {.notes}
-Slide 13 (replaced on 24 November: the slide with fixed and growth mindset is out, the term stays in my words).
+**Slide 13, 45 seconds.**
 
-The aim of all of this is a growth mindset: "I can learn" in place of "I'm not good". Nobody is forced to learn a tool. I see it in the informal meetings, and I cannot show it with commits. The book I build on says itself that growth mindset may have been oversold.
+- **The numbers:** half of the trained people have commits on GitHub, and they write most of them with an agent.
+- **The question:** what does a novice still learn about Git when the agent writes the commands?
+- **CLICK. The invitation:** I have the data and no answer. I can show who was trained, who was a novice, and how they work with agents. This is partly why I am here: if you study how people learn, I would like to find you.
 
-What the data does show is this: half of the people trained in a workshop have commits on GitHub, and they write most of those commits with an agent. What does a novice learn about Git when the agent writes the commit? I have the data and no answer. If you study how people learn, I would like to find out with you.
+**Left out:** growth mindset. The book itself says it may have been oversold.
 :::
 
 ## Git for Scientists: teaching the need to know
@@ -503,11 +567,11 @@ What the data does show is this: half of the people trained in a workshop have c
 :::
 
 ::: {.notes}
-Added 24 November, from my slides for the DSN Community Meeting 2026. 40 seconds.
+**40 seconds.**
 
-We teach Git first, and then agents. What is left to teach once an agent takes the overhead fits into a day: make a commit and say what it holds, read a diff, experiment on a branch, review a pull request, and know what never enters a repository or an AI tool. The last one matters most. It has never been easier to paste personal data into a chat window.
-
-This is the need to know. First we teach it.
+- **The minimum:** I teach on a need to know basis. Nobody is taught in the terminal. We use desktop apps: GitHub Desktop, RStudio, VS Code.
+- **The four steps:** make a commit, see what changed in a file, work on a branch, bring the branch back through a pull request.
+- **Data security:** what never goes into a repository or into an AI tool.
 :::
 
 ## Agents for Scientists: handing the need to know over
@@ -523,13 +587,12 @@ So that we can still prove what is human.
 :::
 
 ::: {.notes}
-Added 24 November, from my slides for the DSN Community Meeting 2026. 40 seconds.
+**45 seconds.**
 
-Then people hand the need to know over to the agent. The mechanical work goes to the agent: make a commit, open a pull request, work on this branch. Because the folder is under version control, every change of the agent can be read and taken back, which a chat window cannot do. And we keep the prompt together with its change, in a folder in the repository.
-
-Why all of this: so that we can still prove what is human when we work with AI in research. Many people struggle with declaring how AI was used. With this record I can show it, and I can also show which part was mine. One case on the next slide.
-
-Say the prompt folder once, here. The next slide shows it.
+- **Once by hand:** people do each step once themselves, through a graphical interface.
+- **Then they hand over:** researchers do not want to make commits, they want to do their research. So they say to the agent: I think this needs a commit, do you agree? And the agent commits.
+- **They stay in control:** they still review what changed, and they review the pull request.
+- **Why:** the mechanical work goes to the agent and the record stays. We track what the agent did and what the person did, so that we can declare both. The next slide shows that record.
 :::
 
 ## One case: this deck
@@ -555,7 +618,7 @@ Say the prompt folder once, here. The next slide shows it.
 :::::
 
 ::: {.key}
-What I asked for, who wrote it and what changed sit in one history.
+One history shows what is mine and what the agent wrote. That is what we declare in a publication.
 :::
 
 ::: {.source}
@@ -563,9 +626,13 @@ What I asked for, who wrote it and what changed sit in one history.
 :::
 
 ::: {.notes}
-Slide 15b (added 24 November), 45 seconds. It follows the slide on handing over, as the proof: this is what "the prompt is kept with its change" looks like. This deck is the case. I wrote the talk in my own words into one file and committed it. The agent rebuilt the slides from that file, and its commit carries a line that says so. The change is 419 lines in 7 files, and I can read every one of them and take any of them back. Without the folder and its history, I would have a chat window and a result.
+**Slide 15b, 45 seconds.** It only works as the proof of the slide before: we track AI use and human contribution to be able to declare both, especially in future publications.
 
-CHECK: the two commits are public once dev is pushed.
+- **Link to the slide before:** this is what that record looks like. This deck is the case.
+- **1. My words:** I wrote the talk as an outline in my own words and committed it.
+- **2. The agent's commit:** I asked the agent to rebuild the deck from the outline. Its commit carries the line "Co-Authored-By: Claude".
+- **3. The change:** 419 lines added, 76 removed, in 7 files. I can read each one and take it back.
+- **The point:** I know which part is mine and which part the agent wrote. That is what I need to declare AI use in a publication, and the history gives it to me.
 :::
 
 ## {.section-slide}
@@ -575,7 +642,7 @@ Ask the learners
 :::
 
 ::: {.notes}
-Section slide, section 7 of the outline.
+**Section slide.** No words. Take a breath, then click.
 :::
 
 ## Research Data Conference 2026: experts as learners
@@ -609,7 +676,12 @@ The room takes the **educator seat**
 :::::
 
 ::: {.notes}
-Slide 17. Section 7, 3 minutes with the next four slides. I myself apply these principles in my own teaching. Last week I was at the Research Data Conference and I taught my first hour of my Git for Scientists workshop. All participants worked through the pre-work tasks. They completed them, some in time, some didn't.
+**Slide 17, 40 seconds.**
+
+- **Evaluation surveys:** I do not like them. Everything comes back as 8 or 9 out of 10, which shows me nothing, and people do not like filling them in.
+- **What I did:** last week at the Research Data Conference in Bern I taught the first hour of the four hour Git for Scientists workshop to about 30 data professionals.
+- **Hour 1:** the room took the learner seat.
+- **Hour 2:** the room took the educator seat and gave me feedback on flipcharts.
 :::
 
 ## 14 of 27 were new to Git or used it now and then
@@ -634,10 +706,28 @@ survey |>
 :::
 
 ::: {.notes}
-Slide 18. 27 answers in the pre-course survey: 10 data stewards, 5 researchers, 2 librarians, 10 other roles. 16 teach Git or plan to. Half are new to Git or use it now and then.
+**Slide 18, 20 seconds.**
+
+- **Who was in the room:** 27 answered the survey before the course. 14 of them were new to Git or used it now and then.
+- **Why it was a good room:** novices and people who use Git extensively, side by side.
+
+**Say** "27 answered the survey". The slide before says "about 30".
+
+**Background:** 10 data stewards, 5 researchers, 2 librarians, 10 other roles. 16 teach Git or plan to.
 :::
 
 ## A rubric for feedback {.rubric-slide}
+
+```{r}
+#| label: note-counts
+note_counts <- feedback |>
+  filter(source == "post_it") |>
+  count(category, valence)
+
+n_notes <- function(cat, val) {
+  note_counts$n[note_counts$category == cat & note_counts$valence == val]
+}
+```
 
 :::::::::::: {.rubric}
 ::: {.rh}
@@ -664,22 +754,33 @@ Went well
 :::
 
 :::: {.rc}
-::: {.fragment .paste .postit .well style="--r: -3deg;" data-fragment-index="4"}
+[`r n_notes("preparation", "well")`]{.cnt}
+
+::: {.fragment .paste .postit .well style="--r: -3deg;" data-fragment-index="5"}
 Homework paid off :)
 :::
 ::::
 
 :::: {.rc}
+[`r n_notes("interaction", "well")`]{.cnt}
+
+::: {.fragment .paste .postit .well .long style="--r: 2deg;" data-fragment-index="6"}
+Great communication and combo of "My turn" & "your turn"
+:::
 ::::
 
 :::: {.rc}
-::: {.fragment .paste .postit .well style="--r: 3deg;" data-fragment-index="5"}
+[`r n_notes("presentation", "well")`]{.cnt}
+
+::: {.fragment .paste .postit .well style="--r: 3deg;" data-fragment-index="7"}
 Calm, clear + kind teaching style
 :::
 ::::
 
 :::: {.rc}
-::: {.fragment .paste .postit .well style="--r: 2deg;" data-fragment-index="6"}
+[`r n_notes("content", "well")`]{.cnt}
+
+::: {.fragment .paste .postit .well style="--r: 2deg;" data-fragment-index="8"}
 I am a complete beginner and I'm starting to understand!
 :::
 ::::
@@ -689,48 +790,81 @@ Can be improved
 :::
 
 :::: {.rc}
+[`r n_notes("preparation", "not_well")`]{.cnt}
+
 ::: {.fragment .paste .postit .improve style="--r: 2deg;" data-fragment-index="1"}
-Only one prep mail and one reminder.
+I didn't catch in the emails that more steps had been added.
 :::
 ::::
 
 :::: {.rc}
+[`r n_notes("interaction", "not_well")`]{.cnt}
+
 ::: {.fragment .paste .postit .improve style="--r: -2deg;" data-fragment-index="2"}
 Question invitations could be even clearer for hesitant people
 :::
 ::::
 
 :::: {.rc}
+[`r n_notes("presentation", "not_well")`]{.cnt}
+
+::: {.fragment .paste .postit .improve .long style="--r: 3deg;" data-fragment-index="3"}
+Clearer display of window switching may improve a sense of content cohesion.
+:::
 ::::
 
 :::: {.rc}
-::: {.fragment .paste .postit .improve style="--r: -3deg;" data-fragment-index="3"}
-Missed some theory: Git vs. GitHub vs. GitLab
+[`r n_notes("content", "not_well")`]{.cnt}
+
+::: {.fragment .paste .postit .improve .long style="--r: -3deg;" data-fragment-index="4"}
+Missed some theoretical concepts on Git and Git vs. GitHub vs. GitLab
 :::
 ::::
 ::::::::::::
 
 ::: {.source}
-Four flipcharts, two colours of post-it notes, 65 notes from the room. Rubric after Greg Wilson, Teaching Tech Together, chapter 8, and his slides on feedback; the column Preparation is mine.
+Four flipcharts, two colours of post-it notes, 65 notes from the room, 8 of them here. All notes: `data/feedback_items.csv` in the repository of this talk. Rubric after @wilson2019 [chap. 8] and his slides on feedback; the column Preparation is mine.
 :::
 
 ::: {.notes}
-Slide 20. Four flipcharts in the room: preparation, interaction, presentation, content. One colour for what went well, one for what can be improved. This is the whole rubric.
+**Slide 20, 2 minutes.** Eight clicks, one note per field, in the words of the room. The number in each field is the count of notes on that part of the flipchart.
 
-One sentence on the failure of the day: the online board I had planned for this did not open in the room, so in the break I set up flipcharts and post-its, and that was the better round.
+- **The rubric:** four flipcharts. Preparation: before the course. Interaction: how I work with the room. Presentation: slides and website. Content: what I taught. One colour for what went well, one for what can be improved.
+- **Before the first click:** I got 65 notes. You see one per field, eight in all. All of them are in the data of this talk.
+- **Can be improved, four clicks:**
+    - **Emails:** pre-work sent by email gets missed. Everyone gets too many emails.
+    - **Questions:** hesitant people need to hear "now is the time to ask".
+    - **Window switching:** show more clearly when I change from the slides to another window.
+    - **Concepts:** I do not say what Git is, what GitHub is and how they differ. I am in two minds: explain first, or let novices use it first.
+- **Went well, four clicks:**
+    - **Homework paid off.**
+    - **My turn, your turn.**
+    - **Calm, clear and kind.**
+    - **A complete beginner who starts to understand:** my favourite sentence. That is why I do this.
+- **The failure of the day, one sentence:** the online board I had planned did not open in the room, so I set up flipcharts and post-its in the break, and that was the better round.
 
-Six clicks, each pastes one note, in the words of the room. First three of my own blind spots: the emails before the day, the invitation to ask questions, the concepts before the tools. I teach against the blind spot and still have my own. Then three notes on what held: the pre-work paid off, the teaching style, and a complete beginner in a room of experts started to understand.
-
-CHECK: the six texts against the photos of the notes. Four were shortened on 24 November.
+**Texts:** six were checked against the photos and the data on 25 November. Two were added on 26 November: "Great communication and combo of My turn & your turn" and "Clearer display of window switching may improve a sense of content cohesion." Both are whole notes. Capitals and one spelling are normalised.
 :::
 
 ## A feedback form people fill in
 
 ::::: {.columns}
 ::: {.column width="30%"}
-- **Short,** in the room
-- **One scale:** 3 is "fully met"
-- **The rest in words**
+::: {.fragment .stay fragment-index=1}
+- **Feedback form:** four areas, in words
+:::
+
+::: {.fragment .stay fragment-index=2}
+- **Think, pair, share**
+:::
+
+::: {.fragment .stay fragment-index=3}
+- **A number, if you need one:** 3 is "fully met"
+:::
+
+::: {.fragment .stay fragment-index=4}
+- **The last 15 minutes**
+:::
 :::
 
 ::: {.column .drawing .drawing-big width="69%"}
@@ -743,27 +877,17 @@ cat("```{=html}", readLines(here::here("slides", "img", "drawing-form.svg")), "`
 :::::
 
 ::: {.notes}
-Slide 20b (added 24 November). 45 seconds. Change slides before I start on the form.
+**Slide 20b, 60 seconds.** Four clicks, each shows one part of the drawing. Change slides before I start on the form.
 
-A feedback form works when it is short and filled in in the room, in the last minutes of the workshop. Scales tell me little: on a five point scale most answers land on 4 and 5. The one scale I use tells people that 3 means "my expectations were fully met". I have six answers with it so far. The rest is feedback in words, along the four areas, with time to think alone, to pair and to share. The learners reflect on the workshop once more, and they practise giving feedback.
+- **CLICK. Feedback form:** the link to the slide before. The same four areas as on the flipcharts, on one sheet: what went well and what can be improved, in words.
+- **CLICK. Think, pair, share:** three minutes alone in quiet, then with a neighbour, then shared with the room.
+- **CLICK. A number, if you need one:** "If you really need something quantitative, then consider a 5 point scale where 3 means expectations fully met. Otherwise you will get 90% 4s and 5s, even if it was bad."
+- **CLICK. The last 15 minutes:** give people the last 15 minutes of the workshop for this. People like to give feedback.
+- **Bridge to the close:** teach, collect the notes, turn them into data, change the material for the next time.
 
-No comparison with online ratings and no percentage; I have no source for one.
+**The 90%** is my experience, I have no source for it. No comparison with online ratings.
 
-CHECK before I cite it: Keeley et al. (2013) on the ceiling effect in evaluations of teaching. That 3 as "fully met" spreads the answers is practice, I found no study that shows it.
-:::
-
-## The loop
-
-::: {.drawing .drawing-wide}
-```{r}
-#| label: drawing-loop
-#| output: asis
-cat("```{=html}", readLines(here::here("slides", "img", "drawing-loop.svg")), "```", sep = "\n")
-```
-:::
-
-::: {.notes}
-Slide 21. First cut if the talk runs long. Everything I've learned about this one week after my workshop itself, and how people can apply this to their own teaching, specifically through a feedback round.
+**Check before I cite it:** Keeley et al. (2013) on the ceiling effect in evaluations of teaching. That 3 as "fully met" spreads the answers is practice, I found no study that shows it.
 :::
 
 ## {.words-slide}
@@ -773,12 +897,16 @@ If you teach a technical tool, take an instructor training.
 :::
 
 - [The Carpentries Instructor Training](https://carpentries.github.io/instructor-training/): open, online
-- The expert blind spot "can be overcome with training" (Wilson 2019, chapter 3)
+- The expert blind spot "can be overcome with training" [@wilson2019, chap. 3]
 
 ::: {.notes}
-Slide 22. Section 8, 1 minute with the last slide. Close chosen on 24 November: take an instructor training. It answers the second question of the opening.
+**Slide 22, the close. 1 minute.** It answers the second question of the opening.
 
-PROPOSAL for the closing words, mine to rewrite: At the start I asked who has had training in how adults learn. I had none until 2020. One course changed how I teach, and it is open to all of you. If you teach a technical tool, take an instructor training. And if you study how people learn, or you wonder what it takes to place someone like me in a group, come and find me.
+- **Back to the opening:** at the start I asked who has had training in how adults learn.
+- **Me:** I had none until 2020. I had the same expert blind spots and the same assumptions. Nothing of what I showed today would exist without that training.
+- **The message:** if you teach a technical tool such as Git, GitHub or coding agents, take an instructor training. It is open to all of you.
+- **The invitation:** if you study how people learn, or you wonder what it takes to place someone like me in a group, come and find me.
+- **End:** thank you. Then questions.
 :::
 
 ## Thank you
@@ -793,13 +921,20 @@ PROPOSAL for the closing words, mine to rewrite: At the start I asked who has ha
 
 **Licence:** this deck is shared under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), except the two slides on motivation, which adapt slides by Greg Wilson and stay under CC BY-SA.
 
-**Declaration of AI use:** to be written, as for the DSN talk.
+**Declaration of AI use:** I wrote the outline of this talk in my own words. Claude Code (Anthropic) built the slides, the charts and the drawings from it and revised them on my instructions. I reviewed every change. The full declaration: <https://github.com/Global-Health-Engineering/talk-enhancer/blob/main/AI-USE.md>
+
+**References:**
+
+::: {#refs}
+:::
 :::
 
 ::: {.notes}
-Slide 23. In the timed run I said that all use of AI is declared; the slide still says "to be written". Write it before 30 November or do not say it.
+**Slide 23.** On the screen during the questions.
 
-OPEN: the second course site (Agents for Scientists) and the declaration of AI use.
+**Declaration of AI use:** the short text on the slide and the full one in `AI-USE.md` were written on 26 November as proposals, mine to check. The link works once `dev` is merged into `main`.
+
+**Open:** the second course site (Agents for Scientists).
 :::
 
 ## {.section-slide}

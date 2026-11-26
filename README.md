@@ -25,4 +25,6 @@ For years we battled to establish our coding, data, and writing workflows on Git
 - `slides/deck.qmd`: the slides (built from the outline on 23 November 2026, with placeholders), a Quarto revealjs deck. The three charts are drawn in the deck from the files in `data/`.
 - `data/commits_by_person.csv`: commits by group member, by rank and without names, taken from the data file of the RDC 2026 talk with the same script. Students are left out, so the file has 17 rows.
 - `data/feedback_items.csv` and `data/survey_counts.csv`: feedback and survey counts of the Git for Scientists workshop at the Research Data Conference 2026, copied from the learnings repository of Git for Scientists with `R/get-learnings-data.R`.
-- `slides/img/`: photos of post-it notes from the feedback round of that workshop.
+- `slides/img/`: photos of post-it notes from the feedback round of that workshop. The drawings in the deck are built by `slides/img/make_drawings.js` (needs the npm package roughjs).
+- `slides/references.bib`: the references cited in the deck.
+- `AI-USE.md`: the declaration of AI use for this talk.

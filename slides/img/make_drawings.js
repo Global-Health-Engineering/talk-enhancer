@@ -134,48 +134,54 @@ loop.push(line([[258, 64], [280, 79], [257, 98]], { sw: 3, stroke: accent }));
 loop.push(rect(350, 255, 100, 100, { fill: accent, fillStyle: "solid", stroke: accent, angle: -0.06 }));
 loop.push(text(400, 288, "note", { size: 28, color: paper, anchor: "middle", angle: -0.06, bold: true }));
 
-// Drawing 7: a short feedback form at the end of the workshop -------------
+// Drawing 7: a feedback form at the end of the workshop --------------------
+// The shapes carry a step: the slide shows them one step per click, in the
+// order I speak: the form with its four areas, think pair share, the scale
+// (apart from the form), the last 15 minutes.
 const form = [];
 const soft = "#4A453E";
-form.push(rect(40, 30, 430, 540, { sw: 3 }));
-form.push(text(62, 46, "feedback form", { size: 30, bold: true }));
-form.push(text(62, 92, "one scale: my expectations", { size: 21, color: soft }));
-[90, 172, 255, 338, 420].forEach((x, i) => {
-  const mid = i === 2;
-  form.push(ell(x, 155, 46, 46, mid ? { fill: accent, fillStyle: "solid", stroke: accent, sw: 3 } : { sw: 2.5 }));
-  form.push(text(x, 141, String(i + 1), { size: 26, bold: true, anchor: "middle", color: mid ? paper : ink }));
-});
-form.push(text(255, 186, "3 = fully met", { size: 22, bold: true, color: accent, anchor: "middle" }));
-form.push(text(62, 228, "four areas, in words", { size: 21, color: soft }));
-const areas = [["Preparation", 62, 262], ["Interaction", 262, 262], ["Presentation", 62, 412], ["Content", 262, 412]];
+const at = (step, shape) => form.push({ ...shape, step });
+// step 1: the sheet with the four areas
+at(1, rect(40, 30, 400, 338, { sw: 3 }));
+at(1, text(60, 44, "feedback form", { size: 30, bold: true }));
+const areas = [["Preparation", 58, 96], ["Interaction", 246, 96], ["Presentation", 58, 228], ["Content", 246, 228]];
 for (const [name, x, y] of areas) {
-  form.push(rect(x, y, 186, 136, { sw: 2.5 }));
-  form.push(text(x + 12, y + 8, name, { size: 23, bold: true }));
-  form.push(text(x + 12, y + 44, "+", { size: 28, bold: true, color: accent }));
-  form.push(line([[x + 40, y + 64], [x + 80, y + 58], [x + 120, y + 66], [x + 168, y + 60]], { curve: true, stroke: grey, sw: 2.5 }));
-  form.push(text(x + 12, y + 84, "–", { size: 28, bold: true, color: accent }));
-  form.push(line([[x + 40, y + 104], [x + 85, y + 110], [x + 125, y + 100], [x + 168, y + 106]], { curve: true, stroke: grey, sw: 2.5 }));
+  at(1, rect(x, y, 176, 122, { sw: 2.5 }));
+  at(1, text(x + 12, y + 6, name, { size: 23, bold: true }));
+  at(1, text(x + 12, y + 38, "+", { size: 28, bold: true, color: accent }));
+  at(1, line([[x + 40, y + 58], [x + 78, y + 52], [x + 116, y + 60], [x + 160, y + 54]], { curve: true, stroke: grey, sw: 2.5 }));
+  at(1, text(x + 12, y + 74, "–", { size: 28, bold: true, color: accent }));
+  at(1, line([[x + 40, y + 94], [x + 82, y + 100], [x + 120, y + 90], [x + 160, y + 96]], { curve: true, stroke: grey, sw: 2.5 }));
 }
-// think, pair, share
+// step 2: think, pair, share
 const head = (x, y) => {
-  form.push(ell(x, y, 40, 40, { fill: paper, fillStyle: "solid", sw: 2.5 }));
-  form.push(line([[x - 24, y + 52], [x - 16, y + 28], [x + 16, y + 28], [x + 24, y + 52]], { curve: true, sw: 2.5 }));
+  at(2, ell(x, y, 40, 40, { fill: paper, fillStyle: "solid", sw: 2.5 }));
+  at(2, line([[x - 24, y + 52], [x - 16, y + 28], [x + 16, y + 28], [x + 24, y + 52]], { curve: true, sw: 2.5 }));
 };
-head(560, 80);
-form.push(text(640, 62, "think", { size: 32, bold: true }));
-head(540, 230); head(592, 230);
-form.push(text(640, 212, "pair", { size: 32, bold: true }));
-head(530, 380); head(578, 380); head(626, 380);
-form.push(text(668, 362, "share", { size: 32, bold: true }));
-for (const y of [150, 300]) {
-  form.push(line([[566, y], [566, y + 36]], { stroke: accent, sw: 3 }));
-  form.push(line([[554, y + 24], [566, y + 38], [578, y + 24]], { stroke: accent, sw: 3 }));
+head(560, 70);
+at(2, text(640, 52, "think", { size: 32, bold: true }));
+head(540, 200); head(592, 200);
+at(2, text(640, 182, "pair", { size: 32, bold: true }));
+head(530, 330); head(578, 330); head(626, 330);
+at(2, text(668, 312, "share", { size: 32, bold: true }));
+for (const y of [134, 264]) {
+  at(2, line([[566, y], [566, y + 30]], { stroke: accent, sw: 3 }));
+  at(2, line([[554, y + 20], [566, y + 32], [578, y + 20]], { stroke: accent, sw: 3 }));
 }
-form.push(ell(548, 520, 64, 64, { sw: 3 }));
-form.push(line([[548, 520], [548, 496]], { sw: 3 }));
-form.push(line([[548, 520], [566, 530]], { sw: 3 }));
-form.push(text(596, 492, "the last 15 minutes", { size: 22, bold: true, color: accent }));
-form.push(text(596, 522, "of the workshop", { size: 21, color: soft }));
+// step 3: the scale, apart from the form
+at(3, text(40, 420, "if you need a number: one scale", { size: 22, bold: true }));
+[70, 150, 230, 310, 390].forEach((x, i) => {
+  const mid = i === 2;
+  at(3, ell(x, 496, 46, 46, mid ? { fill: accent, fillStyle: "solid", stroke: accent, sw: 3 } : { sw: 2.5 }));
+  at(3, text(x, 482, String(i + 1), { size: 26, bold: true, anchor: "middle", color: mid ? paper : ink }));
+});
+at(3, text(230, 530, "3 = expectations fully met", { size: 22, bold: true, color: accent, anchor: "middle" }));
+// step 4: the last 15 minutes
+at(4, ell(548, 500, 64, 64, { sw: 3 }));
+at(4, line([[548, 500], [548, 476]], { sw: 3 }));
+at(4, line([[548, 500], [566, 510]], { sw: 3 }));
+at(4, text(596, 472, "the last 15 minutes", { size: 22, bold: true, color: accent }));
+at(4, text(596, 502, "of the workshop", { size: 21, color: soft }));
 
 // Writers -----------------------------------------------------------------
 const gen = rough.generator();
@@ -209,6 +215,8 @@ function svgOf(shapes, w, h) {
       const cy = s.t === "text" ? s.y + s.size / 2 : s.y + s.h / 2;
       body = `<g transform="rotate(${(s.angle * 180 / Math.PI).toFixed(2)} ${cx} ${cy})">${body}</g>`;
     }
+    // A shape with a step appears on that click of the slide.
+    if (s.step) body = `<g class="fragment" data-fragment-index="${s.step}">${body}</g>`;
     parts.push(body);
   }
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img">\n${parts.join("\n")}\n</svg>\n`;

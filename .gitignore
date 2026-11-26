@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Rendered deck and dated exports
+export/
+slides/deck.html
+slides/deck.pdf
+slides/deck_files/
