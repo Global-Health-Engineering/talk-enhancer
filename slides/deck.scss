@@ -1,0 +1,177 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Atkinson Hyperlegible Next", "Helvetica Neue", Arial, sans-serif;
+$presentation-font-size-root: 40px;
+$body-bg: #F6F1E7;
+$body-color: #1A1714;
+$link-color: #901C6C;
+$presentation-heading-font-weight: 800;
+$presentation-heading-color: #1A1714;
+$presentation-h2-font-size: 1.5em;
+$presentation-h3-font-size: 1.1em;
+
+/*-- scss:rules --*/
+// Paper, ink and one purple, after the Ledger deck of the RDC 2026 talk.
+:root {
+  --paper: #F6F1E7;
+  --ink: #1A1714;
+  --grey: #4A453E;
+  --accent: #901C6C;
+}
+
+.reveal .slides section { text-align: left; }
+.reveal h2 { letter-spacing: -0.01em; margin-bottom: 0.7em; }
+.reveal h3 { color: var(--accent); }
+.reveal li { margin-bottom: 0.45em; line-height: 1.25; }
+.reveal .fragment { transition: none !important; }
+
+.reveal .key {
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 3px solid var(--ink);
+  font-size: 1.25em;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.reveal .source {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.6em;
+  color: var(--grey);
+}
+
+.reveal .title-slide-own .tt {
+  font-size: 2.3em;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: 1.2em;
+}
+.reveal .title-slide-own .ta {
+  margin-top: 1.5em;
+  padding-top: 0.6em;
+  border-top: 3px solid var(--ink);
+  font-size: 0.8em;
+}
+
+.reveal .columns img { max-height: 560px; }
+.reveal img.note-photo { max-height: 620px; display: block; margin: 0 auto; }
+
+// Slides built from outline.md on 23 November 2026.
+.reveal .adm { font-size: 1.7em; font-weight: 800; line-height: 1.1; margin-top: 0.6em; }
+.reveal .adm p { margin: 0.25em 0; }
+.reveal .adm .stay { color: var(--accent); margin-top: 0.5em; }
+
+.reveal .words { font-size: 3.6em; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+.reveal .words p { margin: 0.12em 0; }
+
+.reveal .quote { font-size: 1.5em; font-weight: 800; line-height: 1.15; margin-top: 0.4em; }
+.reveal .quote.large { font-size: 2.1em; margin-top: 1em; }
+.reveal .quote-source { font-size: 0.7em; color: var(--grey); margin-top: 0.6em; }
+
+.reveal .placeholder {
+  border: 4px dashed var(--grey);
+  color: var(--grey);
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 0.5em;
+}
+.reveal .placeholder.wide { min-height: 300px; }
+
+.reveal .loop { font-size: 1.9em; font-weight: 800; line-height: 1.1; }
+.reveal .loop p { margin: 0.3em 0; padding-left: 0.5em; border-left: 10px solid var(--accent); }
+
+.reveal .ack { font-size: 0.6em; color: var(--grey); margin-top: 1.5em; line-height: 1.3; }
+
+// The feedback rubric with digital post-it notes that are pasted on click.
+.reveal .rubric-slide h2 { margin-bottom: 0.3em; }
+.reveal .rubric {
+  display: grid;
+  grid-template-columns: 190px repeat(4, 1fr);
+  grid-template-rows: auto 285px 285px;
+  gap: 10px;
+}
+.reveal .rubric p { margin: 0; }
+.reveal .rubric .rh { font-weight: 800; font-size: 1em; padding-bottom: 0.1em; }
+.reveal .rubric .rl { font-weight: 800; font-size: 0.8em; line-height: 1.1; padding: 0.4em 0.3em 0 0; border-top: 10px solid var(--ink); }
+.reveal .rubric .rl.well { border-top-color: #F2A04A; }
+.reveal .rubric .rl.improve { border-top-color: #C9A0DC; }
+.reveal .rubric .rc { position: relative; border: 2px solid #D8D0C0; }
+// The count of notes per field stays readable on top of the pasted note.
+.reveal .rubric .cnt { position: absolute; right: 14px; bottom: 8px; font-size: 0.95em; font-weight: 800; color: #4A453E; z-index: 3; }
+.reveal .rubric .postit {
+  position: absolute;
+  inset: 8px 8px 8px 8px;
+  padding: 14px 16px;
+  font-size: 0.95em;
+  line-height: 1.12;
+  box-shadow: 4px 8px 14px rgba(26, 23, 20, 0.28);
+  transform: rotate(var(--r, 0deg));
+  z-index: 2;
+}
+.reveal .rubric .postit.well { background: #F2A04A; }
+.reveal .rubric .postit.improve { background: #C9A0DC; }
+.reveal .rubric .fragment.paste {
+  opacity: 0;
+  transform: translateY(-90px) rotate(calc(var(--r, 0deg) * -4)) scale(1.35);
+  transition: transform 0.38s cubic-bezier(0.2, 1.4, 0.4, 1), opacity 0.18s ease-out !important;
+}
+.reveal .rubric .fragment.paste.visible {
+  opacity: 1;
+  transform: rotate(var(--r, 0deg)) scale(1);
+}
+
+// Drawings built by slides/img/make_drawings.js, placed inline so they use the deck typeface.
+.reveal .drawing svg { width: 100%; height: auto; max-height: 640px; }
+
+// A drawing that fills the slide width (blind spot, loop).
+.reveal .drawing-wide svg { display: block; margin: 0 auto; max-height: 560px; width: auto; height: 560px; }
+.reveal .drawing-tight svg { height: 440px; }
+.reveal .drawing-wide + .key { margin-top: 0.3em; }
+
+// The word the organisers added to the title.
+.reveal .title-slide-own .ai { color: var(--accent); }
+
+// Changes after my feedback per slide, 24 November 2026.
+.reveal .standup { font-size: 1.7em; line-height: 1.15; margin-top: 0.8em; }
+.reveal .standup strong { color: var(--accent); }
+.reveal .side-key { font-size: 1.35em; font-weight: 800; line-height: 1.15; padding-top: 2.2em; }
+.reveal .side-key p { margin: 0 0 0.8em 0; }
+.reveal .section-slide .section-title { font-size: 3.2em; font-weight: 800; line-height: 1; letter-spacing: -0.02em; margin-top: 2.2em; color: var(--accent); }
+.reveal .big-list { font-size: 1.6em; padding-top: 0.8em; }
+.reveal .big-list li { margin-bottom: 0.7em; }
+.reveal .quote { color: var(--accent); border-left: 12px solid var(--accent); padding-left: 0.5em; }
+.reveal .words.in-accent { color: var(--accent); }
+.reveal .facts { font-size: 1.05em; font-weight: 800; margin-bottom: 1.2em; }
+.reveal .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.reveal .steps .step { border: 4px solid var(--ink); padding: 0.6em 0.7em 0.4em; min-height: 380px; font-size: 1.3em; line-height: 1.15; }
+.reveal .steps .step p { margin: 0 0 0.5em 0; }
+.reveal .steps .when { display: block; color: var(--accent); font-weight: 800; font-size: 1.3em; }
+.reveal .steps .small { font-size: 0.7em; color: var(--grey); }
+.reveal .drawing-big svg { max-height: 760px; }
+.reveal .drawing-wide svg { height: 720px; max-height: 720px; }
+
+// Round of 24 November after the first timed run.
+.reveal .years { font-size: 1.3em; margin-top: 1em; }
+.reveal .years ul { list-style: none; margin-left: 0; }
+.reveal .years li { margin-bottom: 0.75em; display: flex; }
+.reveal .years .yr { flex: 0 0 8.2em; font-weight: 800; color: var(--accent); }
+.reveal .need { font-size: 1.3em; margin-top: 1em; }
+.reveal .need li { margin-bottom: 0.7em; }
+.reveal .need .term { color: var(--accent); font-weight: 800; }
+
+// Long notes on the rubric get smaller type so they stay verbatim.
+.reveal .rubric .postit.long { font-size: 0.8em; }
+
+// Links read as links: underlined on every slide, and on the timeline with an
+// arrow that says they open a page.
+.reveal .slides a { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; }
+.reveal .years a::after { content: "\00a0\2197"; font-weight: 800; text-decoration: none; display: inline-block; }
+
+// The reference list sits in the small print of the thank you slide.
+.reveal .ack #refs { margin-top: 0.2em; }
+.reveal .ack #refs .csl-entry { margin-bottom: 0.2em; }

@@ -1,0 +1,11 @@
+event_id,question,answer,n
+rdc-2026,git_experience,never,7
+rdc-2026,git_experience,now and then,7
+rdc-2026,git_experience,regularly,4
+rdc-2026,git_experience,extensively,9
+rdc-2026,role,data steward,10
+rdc-2026,role,researcher,5
+rdc-2026,role,librarian,2
+rdc-2026,role,other role,10
+rdc-2026,teaches_git,teaches Git or plans to,16
+rdc-2026,teaches_git,does not,11

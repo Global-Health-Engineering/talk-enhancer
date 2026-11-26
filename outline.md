@@ -1,0 +1,245 @@
+# Outline: EnhanceR Symposium 2026 talk
+
+Talk: "Teaching Git, GitHub, and coding agents to researchers who do not come from IT". Monday 30 November 2026, PSI Villigen, 20 minutes plus 5 minutes of questions, given twice (11:45 in WHGA/001 and 14:35 in WHGA/121).
+
+How this file works: each section holds my own words first, in quote blocks. Words in [square brackets] are readings I am not sure of. Below my words sits the slide plan. Lines that start with TODO are still open and are mine to answer. The deck is rebuilt from this file.
+
+Sources named in the slide plan:
+
+- RDC talk: `talk/ledger/deck.qmd` in <https://github.com/Global-Health-Engineering/rdc-2026>
+- RDC workshop: `workshop/slides.qmd` in the website repository of the gitforsci-rdc organisation
+- Draft deck: `slides/deck.qmd` in this repository (first draft of 22 November)
+- Book: Greg Wilson (2019), Teaching Tech Together, Taylor & Francis, CC BY-NC 4.0, <https://teachtogether.tech/en/index.html>
+
+## Lars's notes, 23 November 2026
+
+### 1. Opening: everyone stands up
+
+> Who in this room is teaching GitHub to scientists?
+>
+> Who in this room has had a formal or semi-formal education in teaching and learning, [in how] adults learn best?
+>
+> Okay, I see quite a few people up here, that's great. I would love to hear what your education is.
+
+Decided: the questions use the wording of the printed title, they replace the show of hands planned on 22 November, and everyone gets up from their seats.
+
+Slide plan:
+
+- Slide 1, title slide.
+- Slide 2, "Please stand up": two lines, shown one after the other.
+  - "Stay standing if you teach Git, GitHub or coding agents to researchers."
+  - "Stay standing if you have had formal or semi-formal training in how adults learn."
+  - Then one or two of those still standing say in a sentence what their training was.
+  - Suggestion: add "or raise a hand" for anyone who prefers to stay seated.
+
+### 2. Where my own teaching comes from
+
+> The one that I followed is Teaching Tech Together. Me going through that program has highlighted so many things that I've integrated into my teaching, which I today believe [are] the foundation of why I have found a good way to teach technical concepts to people not from IT, which is largely what our learners are, or at least the learners that I choose to teach.
+>
+> Crucial to all of this is that we find a way to evaluate ourselves, be honest to ourselves, be critical with ourselves to improve our teaching. Be open to applying new methods and realizing certain things that may feel uncomfortable.
+
+Slide plan:
+
+- Slide 3, "Who speaks": the slide from the RDC talk (id `s-quiet`): "No doctorate. No qualification in statistics. No computer science degree." Then "An environmental engineer who likes computers." and "Empathy, patience and persistence." One line added for this room: embedded data steward, I sit with a research group of 15 people at ETH Zurich, Global Health Engineering (wording changed on 23 November, see section 5).
+- Slide 4, "Where this comes from": Teaching Tech Together, Greg Wilson (2019), free to read. The book says of itself that it is derived from The Carpentries instructor training, and that training is the open route today. My own route was the RStudio instructor certification in 2020, built by Greg Wilson on the same material. Base: the slide "Where this comes from" of the RDC workshop.
+  - Wording check: Greg Wilson is the co-founder of Software Carpentry, which became part of The Carpentries. "Founder of The Carpentries" would not be exact.
+
+### 3. The words "just", "quickly", "easily"
+
+> How often in your teaching do you use the words just, quickly, easily? Have you ever observed yourself? Have you ever filmed your own workshop and then assessed how many times you use these words?
+>
+> These are the types of words that we as educators, when we are speaking to our learners, they may slip out unnoticed. But what they can do in a learner is to put them into a seat where they don't believe in being able to learn these concepts themselves. They might have even been told that they are not capable of learning technical topics, that there may be something like a gene or a talent [for] computational topics, which goes beyond our individual capacity.
+>
+> Most of these things we know today are wrong. They've been disproven. But there's still a lot to learn about how adults actually learn when they're learning technical topics. And it has a lot to do with motivation.
+
+Slide plan:
+
+- Slide 5, three words in large type: just, quickly, easily. Then the question "Have you ever filmed your own workshop?" On the side a placeholder for a photo of someone who looks highly demotivated. Base: the slide "Words I leave out" of the RDC workshop, with its line "They say that a step costs nothing. A learner who is stuck on it hears: it is me."
+  - TODO: choose the photo. Until then the frowning figure from Greg Wilson's motivation slides (already in the RDC workshop deck, CC BY 4.0) stands in.
+- Slide 6, "The expert blind spot": the error message, read as a normal step by the expert and as proof of failure by the novice. With the citation.
+  - Definition: Wilson (2019), chapter 3, "Expertise and Memory", <https://teachtogether.tech/en/index.html#s:memory>. Experts "can no longer imagine what it's like to not see the world that way". The same chapter has the box "The J Word": experts often betray their blind spot by using the word "just".
+  - Mental models: Wilson (2019), chapter 2, "Mental Models and Formative Assessment", <https://teachtogether.tech/en/index.html#s:models>. Novices "don't yet have a usable mental model of the problem domain", and manuals frustrate novices because they use jargon and do not explain things.
+  - My point on the slide: experts design their teaching from their own mental model, and novices receive too many uncertainties. The book does not say this in one sentence; the two passages above are the closest, so the slide cites both chapters.
+- Slide 7, "No gene for coding": of 778 university course grade distributions, 5.8% showed signs of being multimodal, and professors who believed in innate talent were more likely to see two groups (Patitsas et al. 2016, cited in Wilson 2019, chapter 10, <https://teachtogether.tech/en/index.html#s:motivation-demotivation>). With a placeholder for a photo or similar.
+  - TODO: choose the photo. Suggestion: a histogram with one hump drawn in the deck from a code chunk, as the picture of "no two groups".
+
+### 4. Motivation and demotivation
+
+> Here are my slides on motivation. Here are my slides on demotivation.
+
+> No matter how easy or simple. This is also where giving everyone significant time for pre-work and then teaching that pre-work in the first lecture pays off. They spend their own time to complete it, some significantly more than others, but without noticing it in class. Then, in class, they are more likely to keep pace with the more experienced learners and will also be able to have formed their own questions due to the pre-work. It's a flipped classroom model without calling it that.
+
+Slide plan: the two slides of the RDC workshop, taken over with their drawn figures (Greg Wilson, Teaching Tech Together, slides on motivation, CC BY 4.0).
+
+- Slide 8, "What motivates adults to learn": self-efficacy (I am in control of my own life), utility (this will help me meet my goals), community (people I know are learning this with me). Below, as the second step of the slide: achievement leads to motivation, so an early win comes first, no matter how small. The pre-work is that early win: everyone gets significant time, some take much more of it than others, and nobody sees that in class. The first hour then teaches the pre-work again. A flipped classroom without calling it that.
+- Slide 9, "What takes motivation away": unpredictability, unfairness, indifference. Then 30 seconds of silence with one question on the slide: "What might you have done in class that took the motivation away?"
+
+### 5. How I teach
+
+> So this is what we're doing in our group. I put a lot of emphasis on these aspects of learning. I check for my expert blind spots and always put myself into the learner's seat.
+>
+> Here's how I teach. Use the points from the RDC conference that I didn't use. [Avoid] the terms, etc.
+
+Found: the points are in the RDC workshop deck. The slide "Six things I do" was shown on 20 November (the sixth, "Try out new things", is out of this talk); the section "More on how I teach" behind the thank you slide holds one slide per point and was not shown.
+
+Slide plan:
+
+- Slide 10, "Five things I do", from the slide "Six things I do" of the RDC workshop. All five are on the slide. I say three of them with an example, the other two are read from the slide:
+  - Words I leave out: just, easily, quickly (already slide 5, so one glance back). Said.
+  - Design for the novice: every click is written down, no gap between two steps, extra material marked as extra. Said, with an example.
+  - Know the learners, then design: a survey before anything is written (27 answers decided the software), a tracker for the pre-work, the content written the day before. On the slide, not said.
+  - A learner account: every demo runs as a second account with the rights of a learner; with my own account buttons differ and warnings never show. On the slide, not said.
+  - Type with the room, mistakes included: participatory live coding, nothing is pasted. Said, with an example.
+- Slide 10b, "Embedded" (added 23 November, evening), from these words:
+
+> The talk is missing the fact that I am an embedded data steward. That belongs into the talk, and my personal relationship with people. I see them every day, I check in with them when I arrive at the office, when I leave. I have what I call informal meetings in which they end up sharing something or we discuss an AI topic or data topic. That is highly important to understand their needs for teaching. Without it I could not design [good] teaching material. I know [the] learner persona extremely well.
+
+  - On the slide, three lines shown one after the other: "I see them every day: a check-in when I arrive, another when I leave." "Informal meetings: someone shares something, or we end up on an AI or data topic." "That is where the learner persona comes from. Without it I could not design the material."
+  - It follows "Know the learners, then design" on slide 10: the survey is how I get to know a room of strangers, the daily contact is how I know the group. It also leads into section 6, what changes in the group.
+  - Suggestion: on slide 10, "Know the learners" becomes a said point and "Type with the room" moves to "on the slide, not said", so the minute for slide 10b comes out of slide 10.
+  - TODO: decide whether slide 10b stays a slide of its own or becomes two sentences said over slide 3.
+  - Drawing (added 23 November): a floor plan with 15 desks, one of them mine, and the central unit at the end of a long dotted line. Files `slides/img/drawing-embedded.svg` and `.excalidraw`, built by `slides/img/make_drawings.js`.
+- Also in the unused slides, as material for single lines: "Why GitHub Desktop?" (11 RStudio, 6 GitHub Desktop, 4 Positron, 5 no preference; I chose against the largest group) and "The same design, three days ago" (what the cohort before changed in the instructions).
+
+### 6. What changes in the group
+
+> Then I want to show the graphic of our Agents for Scientists, our number of commits on Git and GitHub, and how we are transforming how people use these technologies in our group. [Mere] proxies for [competency] and the most efficient activity.
+>
+> We're seeing [a] shift, and particularly [a] shift [in] how comfortable people feel about using the tools. And having addressed their fears, they now believe they can do it. They've applied a growth mindset to themselves. And that in itself is the best [goal] we can have as teachers: to change the perception of our learners and bring them back to believing in themselves, being capable of learning, which then [can have] better outcomes than being told that you have to learn a certain tool, or that we should force every PhD to learn Git.
+
+> Commits, pull requests, comments and so on may be imperfect proxies for competency or research quality, but they show the shift towards actively working with version control systems, which is the aim. Once we have everyone using the tools comfortably, we can increase our overall potential for collaborative work that leads to competency and quality.
+
+> And it moves people into a different mindset for project and folder organization, file management and so on. The folder as the unit of an output (a manuscript, a dataset, a piece of software) to which tasks (issues) are attached where they belong: in the issue tracker, not separate from the folder itself and buried in email, Asana, Todoist and the likes.
+
+> "Claude Code? Codex? Clearly these aren't for me and only for people writing code." What terrible wording for a more powerful chat window.
+
+Decided: the term growth mindset stays. The 7 of 14 go in. The agents part stays as it is in these words, because the Git for Scientists work is agents work too: these elements are what opens people up to agentic AI.
+
+Slide plan:
+
+- Slide 11, "Commits by group member: each bar is one person", the chart of the RDC talk (id `s-persons`), drawn here from a code chunk. A dot marks the 14 people trained in the workshops. 7 of them have no commit on GitHub since. My line: "They might have committed their work, but not pushed. Commit and push, commit and push."
+  - Fact check for the line: the data counts commits that reached GitHub, so work that is committed and not pushed cannot be told apart from no work. That supports the line.
+  - TODO: look at the 7. The talk data holds ranks only, no names (ranks 29 to 35, each with 0 commits; one more trained person has 1). Who they are, which workshop they took and what they work on is a look in ghedata, outside this public repository.
+- Slide 12, the proxy slide: the reviewer's sentence from the RDC talk ("useful process indicators, but they are imperfect proxies for genuine competency"), then my answer above: the shift towards working with version control is the aim.
+- Slide 13, "Fixed mindset, growth mindset": the RDC slide (id `s-mind`), "I'm not good." and "I can learn."
+- Slide 14, "Voices from GHE": only if I manage to give the talk to the group before 30 November.
+  - TODO: decide after Thursday 26 November. Without the practice run in the group this slide is out.
+- Slide 15, "Why Git first, then agents": the folder as the unit of an output, with its tasks as issues where they belong. Version control is what connects a prompt to its changes.
+  - Drawing (added 23 November): one folder with three issue cards pinned to it, and its history below as a line of commits, one of them marked "change" with the prompt attached. Files `slides/img/drawing-folder.svg` and `.excalidraw`. The third bullet now reads "Version control keeps a prompt with its change".
+- Slide 16, the quote in large type: "Claude Code? Codex? Clearly these aren't for me and only for people writing code." Then: a more powerful chat window with a terrible name.
+
+### 7. Last week: my own workshop as the test
+
+> I myself apply these principles in my own teaching. Last week I was at the Research Data Conference and I taught my first hour of my Git for Scientists workshop. All participants worked through the pre-work tasks. They completed them, some in time, some didn't.
+>
+> Everything I've learned about this one week [after] my workshop itself, and how people [can] understand how they could apply this to [their] own teaching, specifically through a feedback round.
+
+This section looks good for now and may need cutting later.
+
+Slide plan, all six from the draft deck:
+
+- Slide 17, "Research Data Conference 2026: experts as learners": about 30 data professionals taught as beginners, pre-work before the day.
+- Slide 18, "Who was in the room": chart of Git experience from the pre-course survey (n = 27), code chunk on `data/survey_counts.csv`.
+- Slide 19, "The failure of the day": the feedback board that did not open in the room, flipcharts set up in the break.
+- Slide 20, "What the room wrote": chart of the 65 post-it notes by flipchart, went well and did not go well (preparation 9 and 6, interaction 10 and 6, presentation 11 and 6, content 7 and 10), with post-it photos.
+- Slide 21, "My own blind spots": what the room named that I had not seen.
+- Slide 22, "The loop": teach, collect on post-its, turn into data, change the material.
+- First cuts if the talk runs long: slides 19 and 22.
+
+### 8. Close
+
+No words yet.
+
+- TODO: write the closing words.
+- TODO: slide 23. The "Four checks for your teaching material" are out for now, I do not like them yet. Three other closes to choose from:
+  - One ask, from my own workshop slide: "If you teach a technical tool, take an instructor training." It answers the second question of the opening.
+  - One thing for the next workshop: film one session and count "just", "quickly", "easily".
+  - The opening again: "Please stand up if you will look at your teaching material differently next week."
+- Slide 24, "Thank you": the two course sites, the citation and funding line from <https://github.com/gitforsci>, the declaration of AI use.
+
+## Time budget
+
+| Section | Slides | Minutes |
+|------------------------|------------------------|------------------------|
+| 1\. Opening, everyone stands up | 1 to 2 | 2 |
+| 2\. Where my teaching comes from | 3 to 4 | 2 |
+| 3\. Just, quickly, easily | 5 to 7 | 3 |
+| 4\. Motivation and demotivation, with 30 seconds of silence | 8 to 9 | 3 |
+| 5\. How I teach | 10 and 10b | 2 |
+| 6\. What changes in the group | 11 to 16 | 4 |
+| 7\. Last week's workshop | 17 to 22 | 3 |
+| 8\. Close | 23 to 24 | 1 |
+| Total | 25 | 20 |
+
+25 slides in 20 minutes is tight, and standing up takes longer than a show of hands. The rehearsal on Thursday 26 November decides the cuts. First candidates: slide 7, slide 12 merged into slide 11, slide 14, slides 19 and 22.
+
+## Changes of 24 November, after the committee review
+
+The deck was changed on 24 November along the committee's findings and my decisions of that day. The slide plan above is not rewritten; this list says what differs.
+
+- Slide 2: a run sheet for the stand-up in the notes (proposal of the speaker coach).
+- Slide 3: "Embedded data steward." is the last large line. The notes carry a proposed sentence on why the talk belongs to a day on AI.
+- Slides 5, 8, 9: the licence in the source lines reads CC BY-SA, as the author's own slides state it. The deck is CC BY 4.0 (decided 24 November), except the two slides on motivation, which stay under CC BY-SA; see `LICENSE.md` and the thank you slide.
+- Slide 6: the drawing `drawing-blindspot` replaces the two columns. The source line says that the error message example is mine. One own blind spot from the RDC workshop is said here.
+- Slide 7: "778 computer science classes at one university", "one class in twenty", "53 professors". The sketch `drawing-humps` replaces the photo placeholder. "Disproven" is out of the notes.
+- Slide 10b: a fourth line, "What it costs". TODO: my numbers (share of the week, who pays, absence).
+- Slide 11: heading "Commits on GitHub: each bar is one person". The solid part of each bar is the share of commits written with an agent. Direct labels in place of the legend. The notes say that the group has seen the chart, and the 7 of 14 is said as an open finding. The chart shows the 17 group members only (me, 14 trained, 2 not trained); students are left out, and one second identity is merged. `R/get-learnings-data.R` holds the rule.
+- Slide 12: the key line speaks of who works with version control today, without "shift".
+- Slide 13: replaced by "An open question" (7 of 14 trained people have commits on GitHub, 62% of their commits are written with an agent). Growth mindset is said as the aim.
+- Slide 15: the notes speak the third point and name the Agents for Scientists workshop. New slide 15b, "One case: this deck": my words in `outline.md` (commit 9434179), the agent's commit d2d6cf1 with its Co-Authored-By line, 419 lines added and 76 removed in 7 files.
+- Slide 16: one clause in the notes on what an agent is.
+- Slide 18: heading "14 of 27 were new to Git or used it now and then", the two groups in purple, the question in the source line.
+- Slide 20: credit for the rubric. New slide 20b, "A feedback form people fill in", with `drawing-form`. Candidate for a cut.
+- Slide 21: `drawing-loop` replaces the four lines.
+- Slide 22: the close is "If you teach a technical tool, take an instructor training", with a proposal for the closing words in the notes.
+- Backup slide after "Thank you": why GitHub and not the ETH GitLab, for now, from my notes of the practice run with the group on 16 November 2026.
+- Not changed: the cuts (the rehearsal decides), slide 14, the declaration of AI use, the second course site.
+
+## Changes of 24 November, after my feedback per slide
+
+- Slide 2: two columns in large type, both as "Sit down if ..."; the line on raising a hand is out.
+- Slide 3: no source line; I say where I sit.
+- Slide 6: drawing and key text side by side. Slide 7: shorter bullets, larger sketch; the detail is in the notes.
+- Slide 8: key line "The pre-work gives everyone an early win." Slide 9: 20 seconds, just with yourself.
+- Three section slides: "How I teach", "What changes in the group", "Last week's workshop". The deck has 30 slides with them.
+- Slide 10b: keywords only (every day, informal meetings, learner persona, what it costs).
+- Slide 11: dashed lines at 100, 500 and 1,000 commits; the source line says why the scale is compressed.
+- Slide 12 and 16: quotes in purple with a bar on the left. Slide 13: the two numbers in two colours.
+- Slide 17: three boxes (before, hour 1, hour 2) in place of four bullets.
+- Slide 20: larger type; six short notes, three to improve (preparation, interaction, content) and three that went well (preparation, presentation, content). The note on version control under presentation is out.
+- Slides 20b and 21: larger drawings.
+
+## Open TODOs
+
+1.  Slide 5 and slide 7: choose the photos.
+2.  Slide 11: look at the 7 trained people without a commit on GitHub.
+3.  Slide 14: voices from the group, decide after Thursday 26 November.
+4.  Section 8: closing words and the closing slide.
+5.  Slide 10b: a slide of its own or two sentences over slide 3; which point of slide 10 gives up its time.
+
+## Changes of 24 November, after the first timed run
+
+The first timed run took 23:39 for the 20 minute slot. Planned and spoken time per section:
+
+| Section | Planned | Spoken |
+|---|---|---|
+| 1. Opening, everyone stands up | 2:00 | 1:02 |
+| 2. Where my teaching comes from | 2:00 | 2:12 |
+| 3. Just, quickly, easily | 3:00 | 2:50 |
+| 4. Motivation and demotivation | 3:00 | 2:43 |
+| 5. How I teach | 2:00 | 3:23 |
+| 6. What changes in the group | 4:00 | 6:39 |
+| 7. Last week's workshop | 3:00 | 4:11 |
+| 8. Close | 1:00 | 0:39 |
+
+What changed in the deck after it (30 slides, 25 in the main run, target 18:30):
+
+- New order of the first part: stand up, who I am, where this comes from, the expert blind spot, no gene for coding, what motivates, what takes motivation away, then "just, quickly, easily" behind the 20 seconds.
+- The section slide "How I teach" is out. "Embedded" opens the section "What changes in the group", followed by a new slide from my talk at the Research Data Conference ("The tools and the teaching come from inside the group", five lines from 2021 to 2027), the commits chart and the open question.
+- "Why Git first, then agents" is replaced by two slides from my slides for the DSN Community Meeting 2026: "Git for Scientists: teaching the need to know" and "Agents for Scientists: handing the need to know over", with the key line "So that we can still prove what is human." "One case: this deck" follows.  The first of the two starts with the commit.
+- Out of the deck: Voices from GHE, the quote on the naming of Claude Code and Codex, The failure of the day (one sentence of it is in the notes of the rubric).
+- The section "Last week's workshop" is now "Ask the learners".
+- Rubric: no counts per field, the note under Content shortened.
+- A new section "Additional slides" at the end: Five things I do, the folder drawing, GitHub activity as an indicator for competency, GitHub and the ETH GitLab.
+- Embedded: larger drawing, the label "many groups, one long line" in larger bold type. The group is 15 people today, 17 over the twelve months of the chart.
+- Notes: scripts of about 60 seconds for the two motivation slides; the study on slide "No gene for coding" described correctly ("the evidence does not support it", 53 instructors, nobody gave grades); Embedded without the two asides; the form without a comparison to online ratings.
